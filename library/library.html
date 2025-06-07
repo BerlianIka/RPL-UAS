@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard BIMA</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="dashboard-container">
@@ -13,26 +13,118 @@
     <aside class="sidebar">
       <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
       <nav class="menu">
-        <a href="assets/icon-dashboard.png" ><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
-        <a href="assets/icon-map.png" ><img src="assets/icon-map.png" alt="" /> Peta</a>
+        <a href="assets/icon-dashboard.png"><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
+        <a href="assets/icon-map.png"><img src="assets/icon-map.png" alt="" /> Peta</a>
         <a href="assets/icon-mentoring.png"><img src="assets/icon-mentoring.png" alt="" /> Mentoring</a>
         <a href="assets/icon-peringkat.png"><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a>
-        <a href="assets/icon-library.png"class="active"><img src="assets/icon-library.png" alt="" /> Library</a>
+        <a href="assets/icon-library.png" class="active"><img src="assets/icon-library.png" alt="" /> Library</a>
       </nav>
       <a class="logout" href="assets/icon-logout.png"><img src="assets/icon-logout.png" alt="" /> Logout</a>
     </aside>
 
-    <!-- MAIN -->
+    <!-- MAIN CONTENT -->
     <main class="main">
-        <header>
-            <div></div> <!-- Placeholder agar layout tetap seimbang -->
-            <div class="top-right-icons">
-              <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
-              <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
-              <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
-            </div>
-          </header>
+      <header class="header">
+  <input type="text" class="search-bar-centered" placeholder="Cari sesuatu..." />
+  <div class="top-right-icons">
+    <button class="icon-button">
+      <i class="fa-solid fa-bell"></i>
+    </button>
+    <button class="icon-button">
+      <i class="fa-solid fa-comment-dots"></i>
+    </button>
+    <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
+  </div>
 
+
+      <!-- LIBRARY SECTION -->
+<section class="library-columns">
+  <div class="library-column">
+    <div class="library-item">
+      <img src="assets/buku.png" />
+      <p>Template Penulisan Skripsi</p>
+      <div class="btn-group">
+        <button class="lihat-btn">Lihat</button>
+        <button class="unduh-btn">Unduh</button>
+      </div>
+    </div>
+    <div class="library-item">
+      <img src="assets/frame.png" />
+      <p>Template IA Panjang Fasilkom</p>
+      <div class="btn-group">
+        <button class="lihat-btn">Lihat</button>
+        <button class="unduh-btn">Unduh</button>
+      </div>
+    </div>
+    <div class="library-item">
+      <img src="assets/frame.png" />
+      <p>Lembar Revisi</p>
+      <div class="btn-group">
+        <button class="lihat-btn">Lihat</button>
+        <button class="unduh-btn">Unduh</button>
+      </div>
+    </div>
+    <div class="library-item">
+      <img src="assets/frame.png" />
+      <p>Lembar Penilaian Penguji</p>
+      <div class="btn-group">
+        <button class="lihat-btn">Lihat</button>
+        <button class="unduh-btn">Unduh</button>
+      </div>
+    </div>
+    <div class="library-item">
+      <img src="assets/book.png" />
+      <p>Lembar Persetujuan Pergantian Judul Skripsi</p>
+      <div class="btn-group">
+        <button class="lihat-btn">Lihat</button>
+        <button class="unduh-btn">Unduh</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="library-column">
+    <div class="library-item">
+      <img src="assets/book.png" />
+      <p>Template MoA Mitra Instansi Pemerintah</p>
+      <div class="btn-group">
+        <button class="lihat-btn">Lihat</button>
+        <button class="unduh-btn">Unduh</button>
+      </div>
+    </div>
+    <div class="library-item">
+      <img src="assets/book.png" />
+      <p>Pedoman Penulisan Dokumen Skripsi</p>
+      <div class="btn-group">
+        <button class="lihat-btn">Lihat</button>
+        <button class="unduh-btn">Unduh</button>
+      </div>
+    </div>
+    <div class="library-item">
+      <img src="assets/book.png" />
+      <p>Berita Acara Ujian Skripsi (2024)</p>
+      <div class="btn-group">
+        <button class="lihat-btn">Lihat</button>
+        <button class="unduh-btn">Unduh</button>
+      </div>
+    </div>
+    <div class="library-item">
+      <img src="assets/book.png" />
+      <p>Lembar Persetujuan Pembatalan Topik Skripsi</p>
+      <div class="btn-group">
+        <button class="lihat-btn">Lihat</button>
+        <button class="unduh-btn">Unduh</button>
+      </div>
+    </div>
+    <div class="library-item">
+      <img src="assets/book.png" />
+      <p>Lembar Persetujuan Pembimbing Lanjutan</p>
+      <div class="btn-group">
+        <button class="lihat-btn">Lihat</button>
+        <button class="unduh-btn">Unduh</button>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
   </div>
 </body>
