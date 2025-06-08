@@ -23,8 +23,8 @@ body, html {
   content: "";
   background: url("assets/k-bimalogin.png") bottom center / contain no-repeat;
   position: absolute;
-  bottom: 0;
-  left: 45%;
+  bottom: 25%;
+  left: 40%;
   transform: translateX(-50%);
   width: 400px;
   height: 100%;
@@ -34,7 +34,7 @@ body, html {
 /* Bubble percakapan */
 .speech-bubble {
   position: absolute;
-  top: 150px; /* posisi di atas kepala karakter */
+  top: 120px; /* posisi di atas kepala karakter */
   left: 73%;
   transform: translateX(-50%);
   background: #fff;
@@ -70,4 +70,30 @@ body, html {
   color: white;
   font-family: sans-serif;
   z-index: 5;
+}
+
+.arena-button {
+  background-color: #6a3ee6;         /* ungu terang */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 50px;               /* bentuk kapsul */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-family: 'sans-serif';
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.arena-button:hover {
+  background-color: #5c30d1;         /* lebih gelap saat hover */
+  transform: scale(1.05);            /* sedikit membesar */
+}
+
+.arena-button {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
 }

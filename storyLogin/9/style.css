@@ -23,8 +23,8 @@ body, html {
   content: "";
   background: url("assets/k-bimalogin.png") bottom center / contain no-repeat;
   position: absolute;
-  bottom: 50;
-  left: 45%;
+  bottom: 25%;
+  left: 40%;
   transform: translateX(-50%);
   width: 400px;
   height: 100%;
@@ -34,8 +34,8 @@ body, html {
 /* Bubble percakapan */
 .speech-bubble {
   position: absolute;
-  top: 150px; /* posisi di atas kepala karakter */
-  left: 73%;
+  top: 180px; /* posisi di atas kepala karakter */
+  left: 60%;
   transform: translateX(-50%);
   background: #fff;
   color: #000;

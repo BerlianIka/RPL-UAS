@@ -1,40 +1,88 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard BIMA</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
   <div class="dashboard-container">
-    
-<!-- SIDEBAR -->
     <aside class="sidebar">
       <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
       <nav class="menu">
-        <a href="assets/icon-dashboard.png" ><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
-        <a href="assets/icon-map.png" ><img src="assets/icon-map.png" alt="" /> Peta</a>
-        <a href="assets/icon-mentoring.png"><img src="assets/icon-mentoring.png" alt="" /> Mentoring</a>
-        <a href="assets/icon-peringkat.png"><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a>
-        <a href="assets/icon-library.png"><img src="assets/icon-library.png" alt="" /> Library</a>
+        <a href="#" class="active"><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
+        <a href="#"><img src="assets/icon-map.png" alt="" /> Peta</a>
+        <a href="#"><img src="assets/icon-mentoring.png" alt="" /> Mentoring</a>
+        <a href="#"><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a>
+        <a href="#"><img src="assets/icon-library.png" alt="" /> Library</a>
       </nav>
-      <a class="logout" href="assets/icon-logout.png"><img src="assets/icon-logout.png" alt="" /> Logout</a>
+      <a class="logout" href="#"><img src="assets/icon-logout.png" alt="" /> Logout</a>
     </aside>
 
-    <!-- MAIN -->
     <main class="main">
-        <header>
-            <div></div> <!-- Placeholder agar layout tetap seimbang -->
-            <div class="top-right-icons">
-              <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
-              <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
-              <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
-            </div>
-          </header>
+      <header>
+        <div></div>
+        <div class="top-right-icons">
+          <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
+          <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
+          <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
+        </div>
+      </header>
 
+      <section class="profile-container">
+        <div class="profile-box">
+          <div class="profile-form-section">
+            <h2 class="profile-title">Profile Saya</h2>
+            <p class="profile-subtitle">Atur dan amankan akun anda</p>
+            <form class="profile-form">
+              <div class="form-group">
+                <label for="fullname">Nama Lengkap</label>
+                <input type="text" id="fullname" value="Berllan Ika Isabela" />
+                <i class="fa-solid fa-pen edit-icon"></i>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" value="23081010056@upnjatim.ac.id" />
+                <i class="fa-solid fa-pen edit-icon"></i>
+              </div>
+              <div class="form-group">
+                <label for="phone">Nomor Telepon</label>
+                <input type="text" id="phone" value="+62 8123456789" />
+                <i class="fa-solid fa-pen edit-icon"></i>
+              </div>
+              <div class="form-group password-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" value="password" />
+                <i class="fa-solid fa-eye toggle-password" onclick="togglePassword()"></i>
+                <i class="fa-solid fa-pen edit-icon"></i>
+              </div>
+              <div class="form-group">
+                <label>Jenis Kelamin</label>
+                <div class="radio-group">
+                  <label for="male"><input type="radio" name="gender" id="male" /> Laki-Laki</label>
+                  <label for="female"><input type="radio" name="gender" id="female" checked /> Perempuan</label>
+                </div>
+              </div>
+              <button type="submit" class="save-button">Simpan</button>
+            </form>
+          </div>
+
+          <div class="profile-photo-section">
+            <img src="assets/profile-dashboard.jpg" class="profile-photo" alt="Foto Profil">
+            <button type="button" class="upload-button">Pilih foto</button>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById('password');
+      passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+    }
+  </script>
 </body>
 </html>
