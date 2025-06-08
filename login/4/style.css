@@ -12,6 +12,6 @@ html, body {
 .portal-bg {
   width: 100vw;
   height: 100vh;
-  background: url("assets/bg-efek.png") center center / contain no-repeat;
+  background: url("assets/bg-efek1.png") center center / contain no-repeat;
   background-color: #000; /* Opsional: bantu lihat batasan portal */
 }

@@ -60,40 +60,24 @@ body, html {
   border-top-color: #fff;
 }
 
-/* Teks klik berikutnya */
-.next-text {
-  position: absolute;
-  bottom: 20px;
-  left: 85%;
-  transform: translateX(-50%);
-  font-size: 14px;
+.fixed-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #7D4AEA;
   color: white;
-  font-family: sans-serif;
-  z-index: 5;
-}
-
-.arena-button {
-  background-color: #6a3ee6;         /* ungu terang */
-  color: white;
-  font-size: 18px;
   font-weight: bold;
-  padding: 14px 40px;
+  padding: 15px 30px;
   border: none;
-  border-radius: 50px;               /* bentuk kapsul */
+  border-radius: 30px;
+  font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  font-family: 'sans-serif';
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 8px 20px rgba(125, 74, 234, 0.4);
+  transition: background 0.3s ease;
+  z-index: 9999;
 }
 
-.arena-button:hover {
-  background-color: #5c30d1;         /* lebih gelap saat hover */
-  transform: scale(1.05);            /* sedikit membesar */
+.fixed-button:hover {
+  background: #5f36c6;
 }
-
-.arena-button {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
 }

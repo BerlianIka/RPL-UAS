@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard BIMA - Profile</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .dashboard-container {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(81, 80, 80, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 30px;
+    }
+
+    .menu a,
+    .logout {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin-bottom: 10px;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .menu a.active,
+    .menu a:hover,
+    .logout:hover {
+      background-color: #d1b3ff;
+      color: #000;
+    }
+
+    .menu img,
+    .logout img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+    }
+
+    .top-right-icons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .icon-button {
+      background-color: #7c4dff;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .profile-image {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #fff;
+    }
+
+    .profile-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('assets/bg-profile.png') center/cover no-repeat;
+      padding: 60px 20px;
+    }
+
+    .profile-box {
+      background: rgba(154, 154, 154, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 900px;
+      width: 100%;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .profile-form-section {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .profile-photo-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-title {
+      font-size: 24px;
+      margin-bottom: 5px;
+      color: #ffcd66;
+    }
+
+    .profile-subtitle {
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #ddd;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+    }
+
+    .edit-icon {
+      position: absolute;
+      right: 10px;
+      top: 35px;
+      cursor: pointer;
+      color: #444;
+    }
+
+    .radio-group label {
+      margin-right: 15px;
+    }
+
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .upload-button {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: #fff;
+      color: #000;
+      cursor: pointer;
+    }
+
+.save-button {
+  padding: 10px 60px;
+  border: none;
+  border-radius: 25px; /* Ubah ke 25px agar lebih oval */
+  background-color: #c9aaff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  margin-left: auto; /* Geser ke kanan */
+}
+
+    @media (max-width: 768px) {
+      .dashboard-container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+      }
+      .profile-box {
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile-form-section, .profile-photo-section {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div>
+        <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
+        <nav class="menu">
+          <a href="#" class="active"><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
+          <a href="#"><img src="assets/icon-map.png" alt="" /> Peta</a>
+          <a href="#"><img src="assets/icon-mentoring.png" alt="" /> Mentoring</a>
+          <a href="#"><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a>
+          <a href="#"><img src="assets/icon-library.png" alt="" /> Library</a>
+        </nav>
+      </div>
+      <a class="logout" href="#"><img src="assets/icon-logout.png" alt="" /> Logout</a>
+    </aside>
+
+    <main class="main">
+      <header>
+        <div></div>
+        <div class="top-right-icons">
+          <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
+          <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
+          <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
+        </div>
+      </header>
+
+      <section class="profile-container">
+        <div class="profile-box">
+          <div class="profile-form-section">
+            <h2 class="profile-title">Profile Saya</h2>
+            <p class="profile-subtitle">Atur dan amankan akun anda</p>
+            <form class="profile-form">
+              <div class="form-group">
+                <label for="fullname">Nama Lengkap</label>
+                <input type="text" id="fullname" value="Berllan Ika Isabela" />
+                <i class="fa-solid fa-pen edit-icon"></i>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" value="23081010056@upnjatim.ac.id" />
+                <i class="fa-solid fa-pen edit-icon"></i>
+              </div>
+              <div class="form-group">
+                <label for="phone">Nomor Telepon</label>
+                <input type="text" id="phone" value="+62 8123456789" />
+                <i class="fa-solid fa-pen edit-icon"></i>
+              </div>
+              <div class="form-group password-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" value="password" />
+                <i class="fa-solid fa-pen edit-icon"></i>
+              </div>
+              <div class="form-group">
+                <label>Jenis Kelamin</label>
+                <div class="radio-group">
+                  <label for="male"><input type="radio" name="gender" id="male" /> Laki-Laki</label>
+                  <label for="female"><input type="radio" name="gender" id="female" checked /> Perempuan</label>
+                </div>
+              </div>
+              <button type="submit" class="save-button">Simpan</button>
+            </form>
+          </div>
+
+          <div class="profile-photo-section">
+            <img src="assets/profile-dashboard.jpg" class="profile-photo" alt="Foto Profil">
+            <button type="button" class="upload-button">Pilih foto</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
