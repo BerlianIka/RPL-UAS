@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.portal-bg {
+  width: 100vw;
+  height: 100vh;
+  background: url("assets/bg-efek.png") center center / contain no-repeat;
+  background-color: #000; /* Opsional: bantu lihat batasan portal */
+}

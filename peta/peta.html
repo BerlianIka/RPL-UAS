@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard BIMA</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="dashboard-container">
-    
-<!-- SIDEBAR -->
+
+    <!-- SIDEBAR -->
     <aside class="sidebar">
       <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
       <nav class="menu">
-        <a href="assets/icon-dashboard.png" ><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
-        <a href="assets/icon-map.png" class="active"><img src="assets/icon-map.png" alt="" /> Peta</a>
-        <a href="assets/icon-mentoring.png"><img src="assets/icon-mentoring.png" alt="" /> Mentoring</a>
-        <a href="assets/icon-peringkat.png"><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a>
-        <a href="assets/icon-library.png"><img src="assets/icon-library.png" alt="" /> Library</a>
+        <a href="#"><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
+        <a href="#" class="active"><img src="assets/icon-map.png" alt="" /> Peta</a>
+        <a href="#"><img src="assets/icon-mentoring.png" alt="" /> Mentoring</a>
+        <a href="#"><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a>
+        <a href="#"><img src="assets/icon-library.png" alt="" /> Library</a>
       </nav>
-      <a class="logout" href="assets/icon-logout.png"><img src="assets/icon-logout.png" alt="" /> Logout</a>
+      <a class="logout" href="#"><img src="assets/icon-logout.png" alt="" /> Logout</a>
     </aside>
 
-    <!-- MAIN -->
+    <!-- MAIN CONTENT -->
     <main class="main">
-        <header>
-            <div></div> <!-- Placeholder agar layout tetap seimbang -->
-            <div class="top-right-icons">
-              <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
-              <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
-              <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
-            </div>
-          </header>
+
+      <!-- HEADER -->
+      <header class="main-header">
+        <div></div> <!-- Placeholder untuk posisi kiri -->
+        <div class="top-right-icons">
+          <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
+          <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
+          <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
+        </div>
+      </header>
+
+      <!-- JUDUL -->
+      <h2 class="peta-title">Peta Level</h2>
+
+      <!-- MAP SECTION -->
+      <div class="map-container">
+        <div class="level level-1">Level 1<br>Gerbang Arcana</div>
+        <div class="level level-2">Level 2<br>Mencari Mentor</div>
+        <div class="level level-3">Level 3<br>Ritual Judul</div>
+        <div class="level level-4">Level 4<br>Awal Petjalanan</div>
+        <div class="level level-5">Level 5<br>Duel Proposal</div>
+        <div class="level level-6-9">Level 6 - 9<br>Lembah Revisi Abadi</div>
+        <div class="level level-10">Level 10<br>Sidang Suci Arcana</div>
+        <div class="level level-end">The End?<br>Wisuda Purnacita</div>
+        <div class="line"></div>
+      </div>
 
     </main>
   </div>
