@@ -77,8 +77,9 @@ body {
 
 /* HEADER */
 .main-header {
-  width: 100%;
-  padding: 16px 0;
+  width: 100vw;
+  left: 0%;
+  padding: 20px 0;
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -90,6 +91,7 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
+  z-index: 10;
 }
 
 .icon-button {
@@ -104,6 +106,7 @@ body {
   align-items: center;
   cursor: pointer;
   font-size: 18px;
+  z-index: 10;
 }
 
 .profile-image {
@@ -112,6 +115,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #fff;
+  z-index: 10;
 }
 
 /* PETA TITLE */
