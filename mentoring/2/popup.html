@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Popup Jadwal Mentoring</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-overlay" id="popupMentoring">
+    <div class="popup-card">
+      <button class="close-button" onclick="closePopup()">×</button>
+
+      <div class="popup-content">
+        <div class="popup-left">
+          <div class="popup-title">Draft BAB II</div>
+          <div class="popup-time">14 Mei 2025 - 14:00</div>
+          <div class="popup-subtitle">Presentasi Online</div>
+          <div class="popup-note">Unggah Bukti Bimbingan untuk mendapatkan +40 XP</div>
+          <img src="assets/k-bima.png" alt="Maskot BIMA" class="popup-maskot">
+        </div>
+        <div class="popup-right">
+          <div>
+            <label>Link Google Meet</label>
+            <input type="text" class="popup-input" value="http://fasilkom.link/zoom">
+          </div>
+
+          <div>
+            <label>Unggah Bukti Mentoring</label>
+            <div class="upload-area">
+              <p>Drag and Drop gambarmu di sini,<br>atau klik unggah</p>
+              <button class="upload-btn">Unggah Foto</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="popup-submit">Ajukan Jadwal Mentoring</button>
+    </div>
+  </div>
+
+  <script>
+    function closePopup() {
+      document.getElementById("popupMentoring").style.display = "none";
+    }
+  </script>
+</body>
+</html>

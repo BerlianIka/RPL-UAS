@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIMA - Ajukan Mentoring</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1b1b2f;
+      color: #fff;
+    }
+
+    /* Tombol pemicu */
+    .mentoring-submit {
+      margin: 80px auto;
+      display: block;
+      background-color: #7c4dff;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      font-size: 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Overlay popup */
+    .popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    /* Kontainer popup */
+    .popup-card {
+      background: linear-gradient(to right, #5e35b1, #7c4dff);
+      border-radius: 24px;
+      padding: 32px;
+      width: 92%;
+      max-width: 960px;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    /* Tombol close */
+    .close-button {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* Konten popup */
+    .popup-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .popup-left {
+      flex: 1;
+      min-width: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .popup-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .popup-time {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .popup-subtitle {
+      font-style: italic;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .popup-note {
+      background-color: #fff3cd;
+      color: #000;
+      padding: 12px 16px;
+      font-size: 14px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 240px;
+    }
+
+    .popup-maskot {
+      width: 160px;
+      margin-top: auto;
+    }
+
+    .popup-right {
+      flex: 1;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .popup-input {
+      padding: 10px 14px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #333;
+      background-color: #fff;
+    }
+
+    .upload-area {
+      border: 2px dashed #fff;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .upload-btn {
+      margin-top: 10px;
+      background-color: #f0aa3c;
+      color: white;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .popup-submit {
+      margin-top: 30px;
+      background-color: #7c4dff;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      font-size: 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .popup-content {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .popup-maskot {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tombol untuk buka popup -->
+  <button class="mentoring-submit" onclick="openPopup()">Ajukan Jadwal Mentoring</button>
+
+  <!-- Popup -->
+  <div class="popup-overlay" id="popupMentoring">
+    <div class="popup-card">
+      <button class="close-button" onclick="closePopup()">×</button>
+
+      <div class="popup-content">
+        <!-- Kiri -->
+        <div class="popup-left">
+          <div class="popup-title">Draft BAB II</div>
+          <div class="popup-time">14 Mei 2025 - 14:00</div>
+          <div class="popup-subtitle">Presentasi Online</div>
+          <div class="popup-note">Unggah Bukti Bimbingan untuk mendapatkan +40 XP</div>
+          <img src="https://i.imgur.com/kZ0YI2W.png" alt="Maskot BIMA" class="popup-maskot">
+        </div>
+
+        <!-- Kanan -->
+        <div class="popup-right">
+          <div>
+            <label>Link Google Meet</label>
+            <input type="text" class="popup-input" value="http://fasilkom.link/zoom">
+          </div>
+
+          <div>
+            <label>Unggah Bukti Mentoring</label>
+            <div class="upload-area">
+              <p>Drag and Drop gambarmu di sini,<br>atau klik unggah</p>
+              <button class="upload-btn">Unggah Foto</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Submit -->
+      <button class="popup-submit">Ajukan Jadwal Mentoring</button>
+    </div>
+  </div>
+
+  <!-- Script untuk buka/tutup -->
+  <script>
+    function openPopup() {
+      document.getElementById("popupMentoring").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popupMentoring").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard BIMA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
+      <nav class="menu">
+        <a href="../dashboard/dashboard.html"><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
+        <a href="../peta/peta.html"><img src="assets/icon-map.png" alt="" /> Peta</a>
+        <a href="../mentoring/mentoring.html" class="active"><img src="assets/icon-bimbingan.png" alt="" /> Mentoring</a>
+        <a href="../peringkat/peringkat.html"><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a>
+        <a href="../library/library.html"><img src="assets/icon-library.png" alt="" /> Library</a>
+      </nav>
+      <a class="logout" href="../login/1/login1.html"><img src="assets/icon-logout.png" alt="" /> Logout</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+      <header>
+        <div></div> <!-- Placeholder agar layout tetap seimbang -->
+        <div class="top-right-icons">
+          <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
+          <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
+          <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
+        </div>
+      </header>
+
+      <div class="wrapper">
+        <div class="mentoring-card">
+          <div class="section-title">
+            <h3>Yang akan datang</h3>
+            <p class="empty-text">Tidak Ada</p>
+          </div>
+
+          <div class="section-title">
+            <h3>Riwayat Bimbingan</h3>
+            <div class="mentoring-list">
+              <div class="mentoring-item">
+                <div>
+                  <p class="mentoring-title">Draft BAB II</p>
+                  <p class="mentoring-time">12 Mei 2025 - 14:00 (Online Meet)</p>
+                </div>
+                <button class="upload-button">Unggah Bukti</button>
+              </div>
+              <div class="mentoring-item">
+                <div>
+                  <p class="mentoring-title">Draft BAB II</p>
+                  <p class="mentoring-time">10 Mei 2025 - (Online)</p>
+                </div>
+                <span class="claimed-tag">Terklaim</span>
+              </div>
+              <div class="mentoring-item">
+                <div>
+                  <p class="mentoring-title">Draft BAB I</p>
+                  <p class="mentoring-time">5 Mei 2025 - (Online)</p>
+                </div>
+                <span class="claimed-tag">Terklaim</span>
+              </div>
+              <div class="mentoring-item">
+                <div>
+                  <p class="mentoring-title">Draft BAB I</p>
+                  <p class="mentoring-time">1 Mei 2025 - 07:00 (Offline)</p>
+                </div>
+                <span class="claimed-tag">Terklaim</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img src="assets/k-bima.png" alt="maskot" class="maskot" />
+      </div>
+
+      <button class="mentoring-submit">Ajukan Jadwal Mentoring</button>
+    </main>
+  </div>
+</body>
+</html>
