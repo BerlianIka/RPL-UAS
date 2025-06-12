@@ -113,47 +113,43 @@ header {
 }
 
 .leaderboard {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 30px 60px;
+  position: relative;
+  margin-right: 120px; /* Geser semua isi ke kiri */
+  text-align: center;
   color: white;
-  gap: 40px;
-}
-
-.leaderboard-left {
-  flex: 1;
-  text-align: left;
 }
 
 .leaderboard h2 {
-  font-size: 24px;
-  margin-bottom: 30px;
-  text-align: left;
+  font-size: 28px;
+  margin-bottom: 40px;
 }
 
 .podium {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-end;
-  gap: 30px;
+  gap: 40px;
   margin-bottom: 40px;
 }
 
 .rank {
-  width: 120px;
+  width: 140px;
   background-color: #6b4bb7;
-  border-radius: 10px 10px 0 0;
-  padding: 10px;
+  border-radius: 12px 12px 0 0;
+  padding: 12px;
   color: white;
-  text-align: center;
 }
 
 .rank img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   margin-bottom: 10px;
+}
+
+.rank p {
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .first {
@@ -170,8 +166,8 @@ header {
 }
 
 .rank-table {
-  width: 100%;
-  max-width: 600px;
+  width: 55%;
+  margin: 0 auto 60px auto;
   border-collapse: collapse;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
@@ -181,7 +177,7 @@ header {
 
 .rank-table th,
 .rank-table td {
-  padding: 10px 12px;
+  padding: 12px 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
 }
@@ -190,28 +186,29 @@ header {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Maskot & Balon Posisi Tetap */
 .avatar-info {
+  position: absolute;
+  right: 40px;          /* tambahkan jarak dari kanan */
+  bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  margin-bottom: 300px; /* bisa sesuaikan sedikit naik/turun */
 }
 
 .avatar-info img {
-  height: 180px;
+  height: 220px;       /* sebelumnya 180px → perbesar maskot */
 }
 
 .speech-bubble {
   background-color: white;
   color: #333;
-  border-radius: 10px;
-  padding: 12px 16px;
+  border-radius: 12px;
+  padding: 14px 18px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: -60px;
-  right: -10px;
   font-size: 14px;
   text-align: left;
   width: 200px;
+  margin-bottom: 12px; /* agar ada jarak antara balon dan kepala maskot */
 }
+

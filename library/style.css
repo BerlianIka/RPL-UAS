@@ -151,11 +151,11 @@ header {
 
 /* Kartu dokumen */
 .doc-card {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(120, 120, 120, 0.5);
   color: #fff;
   border-radius: 16px;
   padding: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(120, 120, 120, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -187,7 +187,7 @@ header {
 .lihat,
 .unduh {
   flex: 1;
-  padding: 6px 12px;
+  padding: 5px 10px;
   font-size: 13px;
   border: none;
   border-radius: 8px;
@@ -214,4 +214,9 @@ header {
 
 .unduh:hover {
   background-color: #512da8;
+}
+
+.lihat i,
+.unduh i {
+  font-size: 14px;
 }

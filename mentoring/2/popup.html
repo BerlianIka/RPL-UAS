@@ -2,47 +2,59 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Popup Jadwal Mentoring</title>
-  <link rel="stylesheet" href="popup.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentoring Detail - BIMA</title>
+  <link rel="stylesheet" href="mentoring-detail.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="popup-overlay" id="popupMentoring">
-    <div class="popup-card">
-      <button class="close-button" onclick="closePopup()">×</button>
+  <div class="dashboard-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
+      <nav class="menu">
+        <a href="#"><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
+        <a href="#"><img src="assets/icon-map.png" alt="" /> Peta</a>
+        <a href="#" class="active"><img src="assets/icon-bimbingan.png" alt="" /> Mentoring</a>
+        <a href="#"><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a>
+        <a href="#"><img src="assets/icon-library.png" alt="" /> Library</a>
+      </nav>
+      <a class="logout" href="#"><img src="assets/icon-logout.png" alt="" /> Logout</a>
+    </aside>
 
-      <div class="popup-content">
-        <div class="popup-left">
-          <div class="popup-title">Draft BAB II</div>
-          <div class="popup-time">14 Mei 2025 - 14:00</div>
-          <div class="popup-subtitle">Presentasi Online</div>
-          <div class="popup-note">Unggah Bukti Bimbingan untuk mendapatkan +40 XP</div>
-          <img src="assets/k-bima.png" alt="Maskot BIMA" class="popup-maskot">
+    <!-- MAIN CONTENT -->
+    <main class="main">
+      <header>
+        <div></div>
+        <div class="top-right-icons">
+          <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
+          <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
+          <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
         </div>
-        <div class="popup-right">
-          <div>
-            <label>Link Google Meet</label>
-            <input type="text" class="popup-input" value="http://fasilkom.link/zoom">
-          </div>
+      </header>
 
-          <div>
-            <label>Unggah Bukti Mentoring</label>
-            <div class="upload-area">
-              <p>Drag and Drop gambarmu di sini,<br>atau klik unggah</p>
-              <button class="upload-btn">Unggah Foto</button>
-            </div>
+      <div class="mentoring-detail">
+        <div class="mentoring-info">
+          <h2>Draft BAB II</h2>
+          <p>14 Mei 2025 - 14:00</p>
+          <p>Presentasi Online</p>
+          <label for="meet-link">Link Google Meet</label>
+          <input type="text" id="meet-link" value="http://fasilkom.link/zoom" readonly />
+        </div>
+
+        <div class="upload-section">
+          <p class="upload-title">Unggah Bukti Mentoring</p>
+          <div class="upload-drop">
+            <p>Drag and Drop gambarmu di sini,<br />atau klik unggah</p>
+            <button class="upload-btn">Unggah Foto</button>
           </div>
         </div>
+
+        <img src="assets/k-bima.png" class="bima-character" alt="Bima Maskot" />
       </div>
 
-      <button class="popup-submit">Ajukan Jadwal Mentoring</button>
-    </div>
+      <button class="mentoring-submit">Ajukan Jadwal Mentoring</button>
+    </main>
   </div>
-
-  <script>
-    function closePopup() {
-      document.getElementById("popupMentoring").style.display = "none";
-    }
-  </script>
 </body>
 </html>
