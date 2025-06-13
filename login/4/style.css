@@ -7,11 +7,12 @@
 html, body {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .portal-bg {
   width: 100vw;
   height: 100vh;
-  background: url("assets/bg-efek1.png") center center / contain no-repeat;
-  background-color: #000; /* Opsional: bantu lihat batasan portal */
+  background: url("assets/bg-efek1.png") center center / cover no-repeat;
 }
