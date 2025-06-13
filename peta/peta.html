@@ -1,94 +1,197 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard BIMA</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-  <div class="dashboard-container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard BIMA</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
+        <nav class="menu">
+          <a href="../dashboard/dashboard.html"
+            ><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a
+          >
+          <a href="../peta/peta.html" class="active"
+            ><img src="assets/icon-map.png" alt="" /> Peta</a
+          >
+          <a href="../mentoring/1/mentoring.html"
+            ><img src="assets/icon-mentoring.png" alt="" /> Mentoring</a
+          >
+          <a href="../peringkat/peringkat.html"
+            ><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a
+          >
+          <a href="../library/library.html"
+            ><img src="assets/icon-library.png" alt="" /> Library</a
+          >
+        </nav>
+        <a class="logout" href="../login/1/login1.html"
+          ><img src="assets/icon-logout.png" alt="" /> Logout</a
+        >
+      </aside>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
-      <nav class="menu">
-        <a href="../dashboard/dashboard.html"><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
-        <a href="../peta/peta.html" class="active"><img src="assets/icon-map.png" alt="" /> Peta</a>
-        <a href="../mentoring/1/mentoring.html"><img src="assets/icon-mentoring.png" alt="" /> Mentoring</a>
-        <a href="../peringkat/peringkat.html"><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a>
-        <a href="../library/library.html"><img src="assets/icon-library.png" alt="" /> Library</a>
-      </nav>
-      <a class="logout" href="../login/1/login1.html"><img src="assets/icon-logout.png" alt="" /> Logout</a>
-    </aside>
+      <!-- MAIN CONTENT -->
+      <main class="main">
+        <!-- HEADER -->
+        <header class="main-header">
+          <div></div>
+          <!-- Placeholder untuk posisi kiri -->
+          <div class="top-right-icons">
+            <button class="icon-button">
+              <i class="fa-solid fa-bell"></i>
+            </button>
+            <button class="icon-button">
+              <i class="fa-solid fa-comment-dots"></i>
+            </button>
+            <img
+              src="assets/profile-dashboard.jpg"
+              alt="Profile"
+              class="profile-image"
+            />
+          </div>
+        </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="main">
+        <!-- JUDUL -->
+        <h2 class="peta-title">Peta Level</h2>
 
-      <!-- HEADER -->
-      <header class="main-header">
-        <div></div> <!-- Placeholder untuk posisi kiri -->
-        <div class="top-right-icons">
-          <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
-          <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
-          <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
+        <!-- MAP SECTION -->
+        <div class="peta-container">
+          <div class="jalur atas">
+            <div id="level-1" class="level">
+              <img
+                src="assets/smoothcorner.png"
+                alt="Bintang"
+                class="bintang"
+              />
+              <p><strong>Level 1</strong><br />Gerbang Arcana</p>
+            </div>
+            <div class="line"></div>
+            <div class="level">
+              <a href="level2/level2.html">
+                <img
+                  src="assets/smoothcorner.png"
+                  alt="Bintang"
+                  class="bintang"
+                />
+              </a>
+              <p><strong>Level 2</strong><br />Mencari Mentor</p>
+            </div>
+            <div class="line"></div>
+            <div class="level">
+              <a href="level3/level3.html">
+                <img
+                  src="assets/smoothcorner.png"
+                  alt="Bintang"
+                  class="bintang"
+                />
+              </a>
+              <p><strong>Level 3</strong><br />Ritual Judul</p>
+            </div>
+            <div class="line"></div>
+            <div class="level">
+              <a href="level4/level4.html">
+                <img
+                  src="assets/smoothcorner.png"
+                  alt="Bintang"
+                  class="bintang"
+                />
+              </a>
+              <p><strong>Level 4</strong><br />Awal Perjalanan</p>
+            </div>
+          </div>
+
+          <!-- Line vertical -->
+          <div class="line-vertical"></div>
+
+          <div class="jalur bawah">
+            <div class="level">
+              <a href="end/end.html">
+                <img
+                  src="assets/smoothcorner.png"
+                  alt="Bintang"
+                  class="bintang"
+                />
+              </a>
+              <p><strong>The End?</strong><br />Wisuda Purnacita</p>
+            </div>
+            <div class="line2"></div>
+            <div class="level">
+              <a href="level10/level10.html">
+                <img
+                  src="assets/smoothcorner.png"
+                  alt="Bintang"
+                  class="bintang"
+                />
+              </a>
+              <p><strong>Level 10</strong><br />Sidang Suci Arcana</p>
+            </div>
+            <div class="line2"></div>
+            <div class="level">
+              <a href="level6/level9.html">
+                <img
+                  src="assets/smoothcorner.png"
+                  alt="Bintang"
+                  class="bintang"
+                />
+              </a>
+              <p><strong>Level 6 - 9</strong><br />Lembah Revisi Abadi</p>
+            </div>
+            <div class="line2"></div>
+            <div class="level">
+              <a href="level5/level5.html">
+                <img
+                  src="assets/smoothcorner.png"
+                  alt="Bintang"
+                  class="bintang"
+                />
+              </a>
+              <p><strong>Level 5</strong><br />Duel Proposal</p>
+            </div>
+          </div>
         </div>
-      </header>
 
-      <!-- JUDUL -->
-      <h2 class="peta-title">Peta Level</h2>
+        <!-- POP UP LEVEL-->
+        <div id="popup" class="popup-container">
+          <div class="popup-content">
+            <button class="close-popup" onclick="closePopup()">✖</button>
 
-      <!-- MAP SECTION -->
-      <div class="peta-container">
-        <div class="jalur atas">
-          <div class="level">
-            <img src="assets/smoothcorner.png" alt="Bintang" class="bintang" />
-            <p><strong>Level 1</strong><br />Gerbang Arcana</p>
+            <div class="popup-flex">
+              <div class="popup-character">
+                <img src="assets/21.png" alt="Penyihir" />
+              </div>
+              <div class="popup-info">
+                <h2>Level 1 – Gerbang Arcana</h2>
+                <p>
+                  Langkah pertamamu telah dimulai. Saat menjejakkan kaki di
+                  pelataran Akademia, sebuah gerbang kuno terbuka menyambutmu.
+                  Mendaftar skripsi adalah kunci memasuki dunia penuh misteri
+                  dan tantangan yang akan menguji segala potensimu.
+                </p>
+                <p class="quest-label">Quest:</p>
+
+                <div class="quest-box">
+                  <div class="quest-left">
+                    <div class="quest-icon">⭐</div>
+                    <div class="quest-text">
+                      <strong>Beri nama tongkat sihirmu</strong>
+                      <p>Lengkapi data dan dokumen pengajuan skripsi.</p>
+                    </div>
+                  </div>
+                  <div class="quest-xp">+60 XP</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="line"></div>
-          <div class="level">
-            <img src="assets/smoothcorner.png" alt="Bintang" class="bintang" />
-            <p><strong>Level 2</strong><br />Mencari Mentor</p>
-          </div>
-          <div class="line"></div>
-          <div class="level">
-            <img src="assets/smoothcorner.png" alt="Bintang" class="bintang" />
-            <p><strong>Level 3</strong><br />Ritual Judul</p>
-          </div>
-          <div class="line"></div>
-          <div class="level">
-            <img src="assets/smoothcorner.png" alt="Bintang" class="bintang" />
-            <p><strong>Level 4</strong><br />Awal Perjalanan</p>
-          </div>
-        </div>
-      
-        <!-- Line vertical -->
-        <div class="line-vertical"></div>
-      
-        <div class="jalur bawah">
-          <div class="level">
-            <img src="assets/smoothcorner.png" alt="Bintang" class="bintang" />
-            <p><strong>The End?</strong><br />Wisuda Purnacita</p>
-          </div>
-          <div class="line2"></div>
-          <div class="level">
-            <img src="assets/smoothcorner.png" alt="Bintang" class="bintang" />
-            <p><strong>Level 10</strong><br />Sidang Suci Arcana</p><p></p>
-          </div>
-          <div class="line2"></div>
-          <div class="level">
-            <img src="assets/smoothcorner.png" alt="Bintang" class="bintang" />
-            <p><strong>Level 6 - 9</strong><br />Lembah Revisi Abadi</p>
-          </div>
-          <div class="line2"></div>
-          <div class="level">
-            <img src="assets/smoothcorner.png" alt="Bintang" class="bintang" />
-            <p><strong>Level 5</strong><br />Duel Proposal</p>
-          </div>
-        </div>
-      </div>          
-    </main>
-  </div>
-</body>
+        </div>  
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
