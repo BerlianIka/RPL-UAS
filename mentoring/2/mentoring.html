@@ -25,7 +25,7 @@
     <!-- MAIN CONTENT -->
     <main class="main">
       <header>
-        <div></div> <!-- Placeholder agar layout tetap seimbang -->
+        <div></div>
         <div class="top-right-icons">
           <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
           <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
@@ -75,41 +75,94 @@
           </div>
         </div>
 
-<div class="maskot-wrapper">
-  <img src="assets/k-bima.png" alt="maskot" class="maskot" />
-  <div id="chat-bubble" class="chat-bubble">
-    Sudah mulai banyak sesi telah kamu lalui, merupakan satu langkah lebih dekat menuju gelar magister pengetahuan. Teruslah melangkah, jangan lengah!
-  </div>
-</div>
-
+        <img src="assets/k-bima.png" alt="maskot" class="maskot" />
+      </div>
 
       <button class="mentoring-submit">Ajukan Jadwal Mentoring</button>
+
+      <!-- MODAL UPLOAD BUKTI -->
+      <div class="modal-overlay" id="uploadModal">
+        <div class="modal-content">
+          <button class="close-icon" onclick="closeModal()">×</button>
+          <h2>Draft BAB II</h2>
+          <p>14 Mei 2025 - 14:00<br>Presentasi Online</p>
+          <label for="link-meet">Link Google Meet</label>
+          <input type="text" id="link-meet" placeholder="Masukkan link Google Meet di sini" />
+          <div class="upload-section">
+            <p>Unggah Bukti Bimbingan untuk mendapatkan +40 XP</p>
+            <div class="upload-box">
+              <p>Drag and Drop gambarmu di sini,<br>atau klik unggah</p>
+              <label for="uploadFile" class="upload-label">Unggah Foto</label>
+              <input type="file" id="uploadFile" hidden />
+            </div>
+          </div>
+          <img src="assets/k-bima1.png" alt="maskot" class="modal-maskot" />
+        </div>
+      </div>
+
+      <!-- MODAL PREVIEW DOKUMEN -->
+      <div class="modal-overlay" id="previewModal">
+        <div class="modal-content preview-mode">
+          <button class="close-icon" onclick="closePreview()">×</button>
+          <div class="preview-header">
+            <div>
+              <h2>Draft BAB II</h2>
+              <p>5 Mei 2025 – Online</p>
+              <p class="xp-text">+40 XP</p>
+            </div>
+          </div>
+          <div class="preview-body">
+            <div class="doc-preview">
+              <img src="assets/pdf.png" alt="Preview Dokumen" />
+              <div class="page-indicator">Page 1 / 64</div>
+            </div>
+            <div class="comments">
+              <div class="comment-box">
+                <div class="comment-author"><b>Pratama Wirya Atmaja, S.Kom., M.Kom</b><br><span>14:50 – 5 Mei 2025</span></div>
+                <p>Hapus kalimat yang tidak penting di bab I, terlalu banyak kalimat pengulangan</p>
+              </div>
+              <div class="comment-box">
+                <div class="comment-author"><b>Pratama Wirya Atmaja, S.Kom., M.Kom</b><br><span>14:50 – 5 Mei 2025</span></div>
+                <p>Sitasinya perbanyak…</p>
+              </div>
+            </div>
+          </div>
+          <img src="assets/k-bima2.png" alt="maskot" class="modal-maskot" />
+        </div>
+      </div>
+
     </main>
   </div>
 
-<script>
-  const texts = [
-    "Sudah mulai banyak sesi telah kamu lalui, merupakan satu langkah lebih dekat menuju gelar magister pengetahuan. Teruslah melangkah, jangan lengah!",
-    "Jangan lupa unggah bukti mentoring agar pencapaianmu tercatat dengan baik!",
-    "Setiap langkah kecil hari ini, adalah lompatan besar di masa depan!"
-  ];
+  <!-- ✅ FIXED JAVASCRIPT -->
+  <script>
+    // Upload modal
+    const uploadButtons = document.querySelectorAll('.upload-button');
+    const uploadModal = document.getElementById('uploadModal');
 
-  let currentIndex = 0;
-  const bubble = document.getElementById("chat-bubble");
+    uploadButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        uploadModal.style.display = 'flex';
+      });
+    });
 
-  function updateBubbleText() {
-    bubble.style.opacity = 0;
-    setTimeout(() => {
-      bubble.textContent = texts[currentIndex];
-      bubble.style.opacity = 1;
-      currentIndex = (currentIndex + 1) % texts.length;
-    }, 500);
-  }
+    function closeModal() {
+      uploadModal.style.display = 'none';
+    }
 
-  setInterval(updateBubbleText, 10000);
-  window.onload = updateBubbleText;
-</script>
-</body>
-</html>
+    // Preview modal
+    const claimTags = document.querySelectorAll('.claimed-tag');
+    const previewModal = document.getElementById('previewModal');
+
+    claimTags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        previewModal.style.display = 'flex';
+      });
+    });
+
+    function closePreview() {
+      previewModal.style.display = 'none';
+    }
+  </script>
 </body>
 </html>

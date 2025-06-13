@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard BIMA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
+      <nav class="menu">
+        <a href="../dashboard/dashboard.html"><img src="assets/icon-dashboard.png" class="active" alt="" /> Dashboard</a>
+        <a href="../peta/peta.html"><img src="assets/icon-mahasiswa.png" alt="" /> Mahasiswa</a>
+        <a href="../peringkat/peringkat.html"><img src="assets/icon-bimbingan.png" alt="" /> Bimbingan</a>
+      </nav>
+      <a class="logout" href="../login/1/login1.html"><img src="assets/icon-logout.png" alt="" /> Logout</a>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+        <header>
+            <div></div> <!-- Placeholder agar layout tetap seimbang -->
+            <div class="top-right-icons">
+              <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
+              <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
+              <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
+            </div>
+             </header>
+
+        <section class="dashboard-content">
+  <h2>Selamat Datang, Pratama Wirya Atmaja, S.Kom., M.Kom!</h2>
+
+  <div class="summary-cards">
+    <div class="card purple">
+      <h3>Total Mahasiswa Bimbingan</h3>
+      <p>23</p>
+    </div>
+    <div class="card purple">
+      <h3>Proses Bimbingan</h3>
+      <p>20</p>
+    </div>
+    <div class="card purple">
+      <h3>Sudah Sidang</h3>
+      <p>3</p>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+    <div class="chart-card">
+      <h4>Grafik Bimbingan</h4>
+      <canvas id="barChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h4>Statistik Mahasiswa</h4>
+      <canvas id="pieChart"></canvas>
+    </div>
+
+    <div class="status-boxes">
+      <div class="status-box">Judul Belum Disetujui<br /><strong>12</strong></div>
+      <div class="status-box">Bimbingan Belum Disetujui<br /><strong>12</strong></div>
+      <div class="status-box">Sempro Belum Disetujui<br /><strong>12</strong></div>
+      <div class="status-box">Semhas Belum Disetujui<br /><strong>12</strong></div>
+    </div>
+  </div>
+
+  <h3>Bimbingan Mendatang</h3>
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th>NPM</th>
+        <th>Nama Mahasiswa</th>
+        <th>Jenis Permintaan</th>
+        <th>Tanggal</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2308100306</td>
+        <td>Berlian Ika Isabela</td>
+        <td>ACC Bimbingan</td>
+        <td>1 Juni 2025</td>
+        <td><a href="#">Lihat Detail</a></td>
+      </tr>
+      <tr>
+        <td>2308100601</td>
+        <td>Lucky Fitrianda Wahyudi</td>
+        <td>ACC Judul</td>
+        <td>1 Juni 2025</td>
+        <td><a href="#">Lihat Detail</a></td>
+      </tr>
+      <tr>
+        <td>2308101042</td>
+        <td>Muhammad Irsyad Majid</td>
+        <td>ACC Sempro</td>
+        <td>1 Juni 2025</td>
+        <td><a href="#">Lihat Detail</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+          </header>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const barCtx = document.getElementById('barChart');
+  new Chart(barCtx, {
+    type: 'bar',
+    data: {
+      labels: ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat'],
+      datasets: [{
+        label: 'Jumlah Bimbingan',
+        data: [5, 15, 15, 12, 9],
+        backgroundColor: '#7c4dff'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } }
+    }
+  });
+
+  const pieCtx = document.getElementById('pieChart');
+  new Chart(pieCtx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Proses Bimbingan', 'Sudah Sidang'],
+      datasets: [{
+        data: [87, 13],
+        backgroundColor: ['#7c4dff', '#ffca28']
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { position: 'bottom' } }
+    }
+  });
+</script>
+
+</body>
+</html>

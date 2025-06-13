@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard BIMA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
+      <nav class="menu">
+        <a href="../dashboard/dashboard.html"><img src="assets/icon-dashboard.png" class="active" alt="" /> Dashboard</a>
+        <a href="../peta/peta.html"><img src="assets/icon-mahasiswa.png" alt="" /> Mahasiswa</a>
+        <a href="../peringkat/peringkat.html"><img src="assets/icon-bimbingan.png" alt="" /> Bimbingan</a>
+      </nav>
+      <a class="logout" href="../login/1/login1.html"><img src="assets/icon-logout.png" alt="" /> Logout</a>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+        <header>
+            <div></div> <!-- Placeholder agar layout tetap seimbang -->
+            <div class="top-right-icons">
+              <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
+              <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
+              <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
+            </div>
+             </header>
+             <section class="mahasiswa-section">
+  <h2>Daftar Mahasiswa Bimbingan</h2>
+
+  <div class="total-box">
+    <div class="total-content">
+      <p>Total Mahasiswa Bimbingan</p>
+      <h3>23</h3>
+    </div>
+    <img src="assets/icon-bimbingan.png" alt="icon" />
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Cari Mahasiswa..." />
+    <button><i class="fa fa-search"></i> Search</button>
+  </div>
+
+  <div class="table-container">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>No ↑</th>
+          <th>NPM</th>
+          <th>Nama</th>
+          <th>Email</th>
+          <th>Nomor Telepon</th>
+          <th>Alasan Permintaan</th>
+          <th>Status</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2308100601</td>
+          <td>Lucky Fitrianda Wahyudi</td>
+          <td>2308100601@student.upnjatim.ac.id</td>
+          <td>081234567890</td>
+          <td><a href="#">Lihat Alasan</a></td>
+          <td><span class="status pending">Menunggu</span></td>
+          <td>
+            <i class="fa fa-check icon-success"></i>
+            <i class="fa fa-times icon-danger"></i>
+            <a href="#">Lihat Detail</a>
+          </td>
+        </tr>
+        <!-- Tambah data lainnya di sini... -->
+      </tbody>
+    </table>
+    <p class="table-info">Menampilkan 1–10 dari 999 data</p>
+  </div>
+</section>
+    </main>
+  </div>
+</body>
+</html>
