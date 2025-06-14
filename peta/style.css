@@ -482,7 +482,7 @@ body {
 }
 
 /* Level 2 */
-/* POPUP LEVEL 1*/
+/* POPUP LEVEL 2*/
 .popup2-container {
   position: fixed;
   top: 0;
@@ -587,4 +587,353 @@ body {
   border-radius: 25px;
   font-weight: bold;
   color: #fff;
+}
+
+/* FORM SETELAH POPUP2 */
+/* Container */
+.popup21-pembimbing-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Content */
+.popup21-pembimbing-content {
+  background: rgba(245, 243, 243, 0.363);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 2rem;
+  max-width: 1000px;
+  width: 90%;
+  height: 500px;
+  color: white;
+  position: relative;
+}
+
+/* Close Button */
+.close21-popup-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Heading & Paragraph */
+.popup21-pembimbing-content h2 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #f4a825;
+  margin-bottom: 0.5rem;
+}
+.popup21-pembimbing-content p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  padding-top: -0.5rem;
+}
+
+/* Form Elements */
+.popup21-pembimbing-content label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.1rem;
+  margin-top: 0.2rem;
+}
+
+.popup21-pembimbing-content select,
+.popup21-pembimbing-content input[type="text"] {
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Submit Button */
+.submit21-btn {
+  margin-top: 1.5rem;
+  background-color: #b095e4;
+  color: white;
+  border: none;
+  padding: 0.5rem 2.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  float: right;
+}
+.submit21-btn:hover {
+  background-color: #977dd3;
+}
+
+/* QUEST ALERT 2*/
+/* Container */
+.quest-alert3 {
+  position: fixed;
+  top: 70px;
+  right: -400px; /* awalnya di luar layar */
+  width: 330px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 20px 0 0 20px;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #000;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* XP Highlight */
+.quest-alert3 span {
+  font-weight: 600;
+  color: #7a4de3;
+}
+
+/* Class untuk tampil */
+.quest-alert3.show {
+  right: 20px;
+  opacity: 1;
+}
+
+/* Class untuk sembunyi */
+.quest-alert3.hide {
+  right: -400px;
+  opacity: 0;
+}
+
+/* QUEST ALERT 4*/
+/* Container */
+.quest-alert4 {
+  position: fixed;
+  top: 130px;
+  right: -400px; /* awalnya di luar layar */
+  width: 250px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 20px 0 0 20px;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #000;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* XP Highlight */
+.quest-alert4 span {
+  font-weight: 600;
+  color: #7a4de3;
+}
+
+/* Class untuk tampil */
+.quest-alert4.show {
+  right: 20px;
+  opacity: 1;
+}
+
+/* Class untuk sembunyi */
+.quest-alert4.hide {
+  right: -500px;
+  opacity: 0;
+}
+
+/* LEVEL 3 */
+.popup3-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup3-content {
+  background: rgba(245, 243, 243, 0.363); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* untuk Safari */
+  border-radius: 25px;
+  padding: 2rem;
+  max-width: 980px;
+  width: 70%;
+  height: 400px;
+  color: white;
+  position: relative;
+}
+
+.close3-popup {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.popup3-flex {
+  display: flex;
+  gap: 2rem;
+}
+
+.popup3-character img {
+  max-width: 280px;
+  height: auto;
+  margin-top: -20px;
+}
+
+.popup3-info h2 {
+  color: #f6ac32;
+  margin-top: 10px;
+}
+
+.popup3-info p {
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+.quest3-label {
+  color: #f6ac32;
+  font-weight: bold;
+  margin-top: 80px;
+}
+
+.quest3-box {
+  background: #6a46d1;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quest3-box:hover {
+  background: #7a5bd8;
+}
+
+.quest3-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quest3-icon img{
+  width: 32px;   
+  height: 32px;
+  object-fit: contain;
+}
+
+.quest3-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #eaeaea;
+}
+
+.quest3-xp {
+  background: #f6ac32;
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.popup31-judul-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup31-judul-content {
+  background: rgba(245, 243, 243, 0.363);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 2rem;
+  max-width: 1000px;
+  width: 90%;
+  height: 500px;
+  color: white;
+  position: relative;
+}
+
+/* Tombol Close */
+.close31-popup {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.popup31-judul-content h2 {
+  color: #f4af3d;
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.popup31-judul-content p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  padding-top: -0.5rem;
+}
+
+#form31-judul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.judul31-input {
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.submit31-judul-btn {
+  background-color: #6c45d3;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit31-judul-btn:hover {
+  background-color: #5932be;
 }

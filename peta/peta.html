@@ -82,14 +82,12 @@
               <p><strong>Level 2</strong><br />Mencari Mentor</p>
             </div>
             <div class="line"></div>
-            <div class="level">
-              <a href="level3/level3.html">
+            <div id="level-3" class="level">
                 <img
                   src="assets/smoothcorner.png"
                   alt="Bintang"
                   class="bintang"
                 />
-              </a>
               <p><strong>Level 3</strong><br />Ritual Judul</p>
             </div>
             <div class="line"></div>
@@ -243,7 +241,7 @@
         </div>
 
         <!-- LEVEL 2 -->
-        <div id="popup-level2" class="popup2-container">
+        <div id="popup-level2" class="popup2-container" style="display: none">
           <div class="popup2-content">
             <button class="close2-popup" onclick="closePopup('popup-level2')">
               ✖
@@ -280,6 +278,134 @@
             </div>
           </div>
         </div>
+
+        <!-- Popup Container -->
+        <div
+          id="popup21-pembimbing"
+          class="popup21-pembimbing-container"
+          style="display: none"
+        >
+          <div class="popup21-pembimbing-content">
+            <button
+              class="close21-popup-btn"
+              onclick="closePopup('popup21-pembimbing')"
+            >
+              ✖
+            </button>
+            <h2>Panggil sang pembimbing</h2>
+            <p>
+              Tidak semua penyihir berjalan sendirian. Di hadapanmu berdiri
+              Ruang Pemanggilan, tempat para mentor terpilih bersedia membimbing
+              para murid. Pilihlah dengan bijak siapa yang akan kau panggil
+              sebagai penuntun langkahmu.
+            </p>
+
+            <!-- Dosen Pembimbing 1 -->
+            <label for="dosen1">Pilih Dosen Pembimbing</label>
+            <select id="dosen1">
+              <option value="">--- Dosen Pembimbing ---</option>
+              <option value="dosen1">Dosen Pembimbing 1</option>
+              <option value="dosen2">Dosen Pembimbing 2</option>
+              <option value="dosen3">Dosen Pembimbing 3</option>
+            </select>
+
+            <label for="alasan1">Alasan memilih dosen pembimbing 1</label>
+            <input
+              type="text"
+              id="alasan1"
+              placeholder="Berikan alasan kenapa memilih Dosen Pembimbing 1"
+            />
+
+            <!-- Dosen Pembimbing 2 -->
+            <label for="dosen2">Pilih Dosen Pembimbing</label>
+            <select id="dosen2">
+              <option value="">--- Dosen Pembimbing ---</option>
+              <option value="dosen1">Dosen Pembimbing 1</option>
+              <option value="dosen2">Dosen Pembimbing 2</option>
+              <option value="dosen3">Dosen Pembimbing 3</option>
+            </select>
+
+            <label for="alasan2">Alasan memilih dosen pembimbing 2</label>
+            <input
+              type="text"
+              id="alasan2"
+              placeholder="Berikan alasan kenapa memilih Dosen Pembimbing 2"
+            />
+            <button id="submit21-pembimbing" class="submit21-btn">Kirim</button>
+          </div>
+        </div>
+
+        <div id="quest-alert3" class="quest-alert3">
+          <p>Quest Level 2 telah diselesaikan, <span>+100 XP</span></p>
+        </div>
+        <div id="quest-alert4" class="quest-alert4">
+          <p>Quest Level 3 Telah dibuka!</p>
+        </div>
+
+        <!-- LEVEL 3 -->
+        <div id="popup-level3" class="popup3-container" >
+          <div class="popup3-content">
+            <button class="close3-popup" onclick="closePopup('popup-level3')">
+              ✖
+            </button>
+
+            <div class="popup3-flex">
+              <div class="popup3-character">
+                <img src="assets/icon-lvl3.png" alt="Penyihir" />
+              </div>
+              <div class="popup3-info">
+                <h2>Level 3 – Ritual Judul</h2>
+                <p>
+                  Setiap penjelajah butuh mantra utama (judul skripsi). Dalam Ritual Judul, 
+                  kau akan memahat niatmu menjadi kata-kata sakti. Tapi hati-hati, judul yang 
+                  lemah akan hancur dalam kobaran kritik. Bacalah literatur purba dan siapkan 
+                  alasan yang kuat!
+                </p>
+                <p class="quest3-label">Quest:</p>
+
+                <div class="quest3-box">
+                  <div class="quest3-left">
+                    <div class="quest3-icon">
+                      <img src="assets/quest-lvl3.png" alt="Star Icon" />
+                    </div>
+                    <div class="quest3-text">
+                      <strong>Ajukan mantra judulmu</strong>
+                      <p>Ajukan dan validasi judul skripsi</p>
+                    </div>
+                  </div>
+                  <div id="after-popuplvl3" class="quest3-xp">+120 XP</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="popup31-judul" class="popup31-judul-container">
+          <div class="popup31-judul-content">
+            <button class="close31-popup-btn" onclick="closePopup('popup31-judul')">
+              ✖
+            </button>
+            <div id="popup31-flex">
+              <h2>Ajukan mantra judulmu</h2>
+              <p>
+                Sebelum menempuh perjalanan besar, kau harus merapal mantra utama: judul skripsi. 
+                Wujudkan ide dan niatmu dalam rangkaian kata-kata sakti yang akan membimbing seluruh 
+                proses penjelajahan akademikmu.
+              </p>
+              <form id="form31-judul">
+                <input
+                  type="text"
+                  id="judul-input"
+                  class="judul-input"
+                  placeholder="Tuliskan judulmu di sini"
+                  required
+                />
+                <button type="submit" class="submit31-judul-btn">Kirim</button>
+            </div>
+            </form>
+          </div>
+        </div>        
+
       </main>
     </div>
     <script src="script.js"></script>
