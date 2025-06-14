@@ -73,14 +73,12 @@
               <p><strong>Level 1</strong><br />Gerbang Arcana</p>
             </div>
             <div class="line"></div>
-            <div class="level">
-              <a href="level2/level2.html">
-                <img
-                  src="assets/smoothcorner.png"
-                  alt="Bintang"
-                  class="bintang"
-                />
-              </a>
+            <div id="level-2" class="level">
+              <img
+                src="assets/smoothcorner.png"
+                alt="Bintang"
+                class="bintang"
+              />
               <p><strong>Level 2</strong><br />Mencari Mentor</p>
             </div>
             <div class="line"></div>
@@ -157,16 +155,19 @@
           </div>
         </div>
 
-        <!-- POP UP LEVEL-->
-        <div id="popup" class="popup-container">
-          <div class="popup-content">
-            <button class="close-popup" onclick="closePopup()">✖</button>
+        <!-- POP UP LEVEL -->
+        <!-- LEVEL 1 -->
+        <div id="popup-level1" class="popup1-container">
+          <div class="popup1-content">
+            <button class="close1-popup" onclick="closePopup('popup-level1')">
+              ✖
+            </button>
 
-            <div class="popup-flex">
-              <div class="popup-character">
-                <img src="assets/21.png" alt="Penyihir" />
+            <div class="popup1-flex">
+              <div class="popup1-character">
+                <img src="assets/icon-lvl1.png" alt="Penyihir" />
               </div>
-              <div class="popup-info">
+              <div class="popup1-info">
                 <h2>Level 1 – Gerbang Arcana</h2>
                 <p>
                   Langkah pertamamu telah dimulai. Saat menjejakkan kaki di
@@ -174,22 +175,111 @@
                   Mendaftar skripsi adalah kunci memasuki dunia penuh misteri
                   dan tantangan yang akan menguji segala potensimu.
                 </p>
-                <p class="quest-label">Quest:</p>
+                <p class="quest1-label">Quest:</p>
 
-                <div class="quest-box">
-                  <div class="quest-left">
-                    <div class="quest-icon">⭐</div>
-                    <div class="quest-text">
+                <div class="quest1-box">
+                  <div class="quest1-left">
+                    <div class="quest1-icon">
+                      <img src="assets/quest-lvl1.png" alt="Star Icon" />
+                    </div>
+                    <div class="quest1-text">
                       <strong>Beri nama tongkat sihirmu</strong>
                       <p>Lengkapi data dan dokumen pengajuan skripsi.</p>
                     </div>
                   </div>
-                  <div class="quest-xp">+60 XP</div>
+                  <div id="after-popuplvl1" class="quest1-xp">+60 XP</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>  
+        </div>
+
+        <div id="popup-level12" class="popup12-container" style="display: none">
+          <div class="popup12-content">
+            <button class="close12-popup" onclick="closePopup('popup-level12')">
+              ✖
+            </button>
+            <h2>Beri nama tongkat sihirmu</h2>
+            <p>
+              Setiap penyihir hebat memulai petualangannya dengan sebuah tongkat
+              sihir yang memiliki nama unik. Berikan nama untuk tongkat sihirmu
+              sebagai tanda resmi memulai perjalanan skripsimu!
+            </p>
+
+            <label for="nama">Nama Lengkap</label>
+            <input
+              type="text"
+              id="nama"
+              placeholder="Masukkan nama lengkap anda"
+            />
+
+            <label for="npm">NPM</label>
+            <input type="text" id="npm" placeholder="Masukkan NPM anda" />
+
+            <label for="topik">Topik Skripsi</label>
+            <input
+              type="text"
+              id="topik"
+              placeholder="Masukkan topik skripsi anda"
+            />
+
+            <label for="transkrip">Unggah Transkrip Nilai</label>
+            <label class="upload12-btn">
+              <input type="file" id="transkrip" />
+              <span>📤 Upload file</span>
+            </label>
+
+            <button id="submit12-btn" type="submit" class="submit12-btn">
+              Kirim
+            </button>
+          </div>
+        </div>
+
+        <div id="quest-alert" class="quest-alert">
+          <p>Quest Level 1 telah diselesaikan, <span>+60 XP</span></p>
+        </div>
+        <div id="quest-alert2" class="quest-alert2">
+          <p>Quest Level 2 Telah dibuka!</p>
+        </div>
+
+        <!-- LEVEL 2 -->
+        <div id="popup-level2" class="popup2-container">
+          <div class="popup2-content">
+            <button class="close2-popup" onclick="closePopup('popup-level2')">
+              ✖
+            </button>
+
+            <div class="popup2-flex">
+              <div class="popup2-character">
+                <img src="assets/icon-lvl2.png" alt="Penyihir" />
+              </div>
+              <div class="popup2-info">
+                <h2>Level 2 – Mencari Mentor</h2>
+                <p>
+                  Di balik gerbang, berdiri Ruang Pemanggilan. Dalam ruangan
+                  ini, para Roh Pembimbing bersedia membimbing para pencari
+                  ilmu. Namun, tidak sembarang mentor akan menyambutmu. Pilihlah
+                  dengan bijak, karena dialah yang akan menuntunmu melewati
+                  badai intelektual yang akan datang.
+                </p>
+                <p class="quest2-label">Quest:</p>
+
+                <div class="quest2-box">
+                  <div class="quest2-left">
+                    <div class="quest2-icon">
+                      <img src="assets/quest-lvl2.png" alt="Star Icon" />
+                    </div>
+                    <div class="quest2-text">
+                      <strong>Panggil Sang Pembimbing</strong>
+                      <p>Pilih dan ajukan dosen pembimbing mu</p>
+                    </div>
+                  </div>
+                  <div id="after-popuplvl2" class="quest2-xp">+100 XP</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <script src="script.js"></script>
