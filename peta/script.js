@@ -20,6 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const submitBtn31 = document.getElementById("submit31-judul");
   const questAlert5 = document.getElementById("quest-alert5");
   const questAlert6 = document.getElementById("quest-alert6");
+  const level4 = document.getElementById("level-4");
+  const popup4 = document.getElementById("popup-level4");
+  const nextQuestBtn4 = document.getElementById("after-popuplvl4");
+  const popup41 = document.getElementById("popup41-container");
+  const questAlert7 = document.getElementById("quest-alert7");
+  const questAlert8 = document.getElementById("quest-alert8");
   const level5 = document.getElementById("level-5");
   const popup5 = document.getElementById("popup-level5");
   const nextQuestBtn5 = document.getElementById("after-popuplvl5");
@@ -27,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const submitBtn51 = document.getElementById("submit51-jadwal");
   const questAlert9 = document.getElementById("quest-alert9");
   const questAlert10 = document.getElementById("quest-alert10");
+
 
   // Buka popup level 1
   level1?.addEventListener("click", () => {
@@ -91,6 +98,25 @@ document.addEventListener("DOMContentLoaded", function () {
     showQuestAlert6();
   });
 
+  // Buka popup level 4
+  level4?.addEventListener("click", () => {
+    popup4.style.display = "flex";
+  });
+
+  // Tombol +60 XP: Tutup popup 4, buka popup 41
+  nextQuestBtn4?.addEventListener("click", () => {
+    popup4.style.display = "none";
+    popup41.style.display = "flex";
+  });
+
+  // Submit tombol form: tutup popup, tampilkan alert
+  popup41?.addEventListener("click", (e) => {
+    e.preventDefault();
+    popup41.style.display = "none";
+      showQuestAlert7();
+      showQuestAlert8();
+  });
+
   // Buka popup level 5
   level5?.addEventListener("click", () => {
     popup5.style.display = "flex";
@@ -109,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showQuestAlert9();
     showQuestAlert10();
   });
+
 
   // Fungsi menampilkan notifikasi lvl 1
   function showQuestAlert() {
@@ -193,6 +220,35 @@ document.addEventListener("DOMContentLoaded", function () {
       // Bersihkan class hide setelah selesai animasi
       setTimeout(() => {
         questAlert6.classList.remove("hide");
+      }, 500);
+    }, 3000);
+  }
+
+  // Fungsi menampilkan notifikasi lvl 4
+  function showQuestAlert7() {
+    questAlert7.classList.add("show");
+
+    setTimeout(() => {
+      questAlert7.classList.remove("show");
+      questAlert7.classList.add("hide");
+
+      // Bersihkan class hide setelah selesai animasi
+      setTimeout(() => {
+        questAlert7.classList.remove("hide");
+      }, 500);
+    }, 3000);
+  }
+
+  function showQuestAlert8() {
+    questAlert8.classList.add("show");
+
+    setTimeout(() => {
+      questAlert8.classList.remove("show");
+      questAlert8.classList.add("hide");
+
+      // Bersihkan class hide setelah selesai animasi
+      setTimeout(() => {
+        questAlert8.classList.remove("hide");
       }, 500);
     }, 3000);
   }

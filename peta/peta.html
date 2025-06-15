@@ -450,7 +450,7 @@
           <div class="popup41-content">
             <button
               class="close41-popup-btn"
-              onclick="closePopup('popup41-bimbingan-container')"
+              onclick="closePopup('popup41-container')"
             >
               ✖
             </button>
@@ -461,7 +461,7 @@
               dengarkan wejangan, dan siapkan rancangan pertama petualanganmu.
             </p>
 
-            <div class="progress-box">
+            <div id="progress41-box" class="progress-box">
               <div class="progress-icon">
                 <img src="assets/quest-lvl4.png" alt="Star Icon" />
               </div>
@@ -469,7 +469,7 @@
                 Lakukan 3 bimbingan awal
               </div>
               <div class="progress-count">
-                1/3 Bimbingan
+                0/3 Bimbingan
               </div>
           </div>
         </div>
@@ -482,7 +482,7 @@
         </div>
 
         <!-- LEVEL 5 -->
-        <div id="popup-level5" class="popup5-container">
+        <div id="popup-level5" class="popup5-container" style="display: none">
           <div class="popup5-content">
             <button class="close5-popup" onclick="closePopup('popup-level5')">
               ✖
@@ -568,6 +568,7 @@
         <div id="quest-alert10" class="quest-alert10">
           <p>Quest Level 6 Telah dibuka!</p>
         </div>
+                
       </main>
     </div>
     <script src="script.js"></script>
