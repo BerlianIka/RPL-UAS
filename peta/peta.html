@@ -83,38 +83,33 @@
             </div>
             <div class="line"></div>
             <div id="level-3" class="level">
-                <img
-                  src="assets/smoothcorner.png"
-                  alt="Bintang"
-                  class="bintang"
-                />
+              <img
+                src="assets/smoothcorner.png"
+                alt="Bintang"
+                class="bintang"
+              />
               <p><strong>Level 3</strong><br />Ritual Judul</p>
             </div>
             <div class="line"></div>
-            <div class="level">
-              <a href="level4/level4.html">
-                <img
-                  src="assets/smoothcorner.png"
-                  alt="Bintang"
-                  class="bintang"
-                />
-              </a>
+            <div id="level-4" class="level">
+              <img
+                src="assets/smoothcorner.png"
+                alt="Bintang"
+                class="bintang"
+              />
               <p><strong>Level 4</strong><br />Awal Perjalanan</p>
             </div>
           </div>
 
-          <!-- Line vertical -->
           <div class="line-vertical"></div>
 
           <div class="jalur bawah">
             <div class="level">
-              <a href="end/end.html">
-                <img
-                  src="assets/smoothcorner.png"
-                  alt="Bintang"
-                  class="bintang"
-                />
-              </a>
+              <img
+                src="assets/smoothcorner.png"
+                alt="Bintang"
+                class="bintang"
+              />
               <p><strong>The End?</strong><br />Wisuda Purnacita</p>
             </div>
             <div class="line2"></div>
@@ -140,14 +135,12 @@
               <p><strong>Level 6 - 9</strong><br />Lembah Revisi Abadi</p>
             </div>
             <div class="line2"></div>
-            <div class="level">
-              <a href="level5/level5.html">
-                <img
-                  src="assets/smoothcorner.png"
-                  alt="Bintang"
-                  class="bintang"
-                />
-              </a>
+            <div id="level-5" class="level">
+              <img
+                src="assets/smoothcorner.png"
+                alt="Bintang"
+                class="bintang"
+              />
               <p><strong>Level 5</strong><br />Duel Proposal</p>
             </div>
           </div>
@@ -343,12 +336,11 @@
         </div>
 
         <!-- LEVEL 3 -->
-        <div id="popup-level3" class="popup3-container" >
+        <div id="popup-level3" class="popup3-container">
           <div class="popup3-content">
             <button class="close3-popup" onclick="closePopup('popup-level3')">
               ✖
             </button>
-
             <div class="popup3-flex">
               <div class="popup3-character">
                 <img src="assets/icon-lvl3.png" alt="Penyihir" />
@@ -356,10 +348,10 @@
               <div class="popup3-info">
                 <h2>Level 3 – Ritual Judul</h2>
                 <p>
-                  Setiap penjelajah butuh mantra utama (judul skripsi). Dalam Ritual Judul, 
-                  kau akan memahat niatmu menjadi kata-kata sakti. Tapi hati-hati, judul yang 
-                  lemah akan hancur dalam kobaran kritik. Bacalah literatur purba dan siapkan 
-                  alasan yang kuat!
+                  Setiap penjelajah butuh mantra utama (judul skripsi). Dalam
+                  Ritual Judul, kau akan memahat niatmu menjadi kata-kata sakti.
+                  Tapi hati-hati, judul yang lemah akan hancur dalam kobaran
+                  kritik. Bacalah literatur purba dan siapkan alasan yang kuat!
                 </p>
                 <p class="quest3-label">Quest:</p>
 
@@ -382,15 +374,16 @@
 
         <div id="popup31-judul" class="popup31-judul-container">
           <div class="popup31-judul-content">
-            <button class="close31-popup-btn" onclick="closePopup('popup31-judul')">
+            <button class="close31-popup" onclick="closePopup('popup31-judul')">
               ✖
             </button>
             <div id="popup31-flex">
               <h2>Ajukan mantra judulmu</h2>
               <p>
-                Sebelum menempuh perjalanan besar, kau harus merapal mantra utama: judul skripsi. 
-                Wujudkan ide dan niatmu dalam rangkaian kata-kata sakti yang akan membimbing seluruh 
-                proses penjelajahan akademikmu.
+                Sebelum menempuh perjalanan besar, kau harus merapal mantra
+                utama: judul skripsi. Wujudkan ide dan niatmu dalam rangkaian
+                kata-kata sakti yang akan membimbing seluruh proses penjelajahan
+                akademikmu.
               </p>
               <form id="form31-judul">
                 <input
@@ -400,12 +393,181 @@
                   placeholder="Tuliskan judulmu di sini"
                   required
                 />
-                <button type="submit" class="submit31-judul-btn">Kirim</button>
+                <button id="submit31-judul" class="submit31-judul-btn">
+                  Kirim
+                </button>
+              </form>
             </div>
-            </form>
           </div>
-        </div>        
+        </div>
 
+        <div id="quest-alert5" class="quest-alert5">
+          <p>Quest Level 3 telah diselesaikan, <span>+120 XP</span></p>
+        </div>
+        <div id="quest-alert6" class="quest-alert6">
+          <p>Quest Level 4 Telah dibuka!</p>
+        </div>
+
+        <!-- LEVEL 4 -->
+        <div id="popup-level4" class="popup4-container">
+          <div class="popup4-content">
+            <button class="close4-popup" onclick="closePopup('popup-level4')">
+              ✖
+            </button>
+            <div class="popup4-flex">
+              <div class="popup4-character">
+                <img src="assets/icon-lvl4.png" alt="Penyihir" />
+              </div>
+              <div class="popup4-info">
+                <h2>Level 4 – Awal Perjalanan</h2>
+                <p>
+                  Perjalananmu dimulai dengan percikan tinta pertama. Di sinilah
+                  hubungan antara penyihir muda dan mentornya diuji. Dengarkan
+                  arahan, perbaiki draft awalmu, dan bangun fondasi yang kokoh
+                  sebelum badai revisi datang menerpa.
+                </p>
+                <p class="quest4-label">Quest:</p>
+
+                <div class="quest4-box">
+                  <div class="quest4-left">
+                    <div class="quest4-icon">
+                      <img src="assets/quest-lvl4.png" alt="Star Icon" />
+                    </div>
+                    <div class="quest4-text">
+                      <strong>Ajukan mantra judulmu</strong>
+                      <p>Ajukan dan validasi judul skripsi</p>
+                    </div>
+                  </div>
+                  <div id="after-popuplvl4" class="quest4-xp">+120 XP</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banyak Bimbingan -->
+        <div id="popup41-container" class="popup41-bimbingan-container">
+          <div class="popup41-content">
+            <button
+              class="close41-popup-btn"
+              onclick="closePopup('popup41-bimbingan-container')"
+            >
+              ✖
+            </button>
+            <h2>Hadiri tiga pertemuan awal</h2>
+            <p>
+              Tinta pertama telah disiapkan, dan kertas awal terbentang. Inilah momen
+              di mana penyihir muda dan pembimbingnya membentuk ikatan. Awali pertemuan,
+              dengarkan wejangan, dan siapkan rancangan pertama petualanganmu.
+            </p>
+
+            <div class="progress-box">
+              <div class="progress-icon">
+                <img src="assets/quest-lvl4.png" alt="Star Icon" />
+              </div>
+              <div class="progress-text">
+                Lakukan 3 bimbingan awal
+              </div>
+              <div class="progress-count">
+                1/3 Bimbingan
+              </div>
+          </div>
+        </div>
+
+        <div id="quest-alert7" class="quest-alert7">
+          <p>Quest Level 4 telah diselesaikan, <span>+120 XP</span></p>
+        </div>
+        <div id="quest-alert8" class="quest-alert8">
+          <p>Quest Level 5 Telah dibuka!</p>
+        </div>
+
+        <!-- LEVEL 5 -->
+        <div id="popup-level5" class="popup5-container">
+          <div class="popup5-content">
+            <button class="close5-popup" onclick="closePopup('popup-level5')">
+              ✖
+            </button>
+            <div class="popup5-flex">
+              <div class="popup5-character">
+                <img src="assets/icon-lvl5.png" alt="Penyihir" />
+              </div>
+              <div class="popup5-info">
+                <h2>Level 5 – Duel Proposal</h2>
+                <p>
+                  Di puncak Menara Teori, para Penjaga Akademik menantimu.
+                  Mereka siap menilai kekuatan nalar dan logika dari mantra
+                  skripsimu. Siapkan dirimu, karena setiap pertanyaan akan
+                  menguji kesiapan dan konsistensimu sebagai calon Sarjana
+                  Arcanum.
+                </p>
+                <p class="quest5-label">Quest:</p>
+
+                <div class="quest5-box">
+                  <div class="quest5-left">
+                    <div class="quest5-icon">
+                      <img src="assets/quest-lvl5.png" alt="Star Icon" />
+                    </div>
+                    <div class="quest5-text">
+                      <strong>Ajukan mantra judulmu</strong>
+                      <p>Ajukan dan validasi judul skripsi</p>
+                    </div>
+                  </div>
+                  <div id="after-popuplvl5" class="quest5-xp">+200 XP</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Sidang Proposal -->
+        <div id="popup51-jadwal" class="popup51-jadwal-container">
+          <div class="popup51-jadwal-content">
+            <button
+              class="close51-popup-btn"
+              onclick="closePopup('popup51-jadwal')"
+            >
+              ✖
+            </button>
+            <h2>Memasuki arena sidang proposal</h2>
+            <p>
+              Tiba saatnya memasuki arena ujian. Para Penjaga Akademik telah
+              menunggu, dan proposalmu akan diuji dalam cahaya logika dan badai
+              pertanyaan. Siapkan keberanian, ini adalah langkah penting menuju
+              pengakuan.
+            </p>
+
+            <label for="judul 1">Judul Skripsi Anda</label>
+            <input
+              type="text"
+              id="alasan1"
+              placeholder="Isi judul skripsi anda"
+            />
+
+            <!-- jadwal sidang -->
+            <label for="jadwal">Jadwal Seminar Proposal</label>
+            <select id="jadwal">
+              <option value="">--- jadwal ---</option>
+              <option value="jadwal1">jadwal1</option>
+              <option value="jadwal2">jadwal 2</option>
+              <option value="jadwal3">jadwal 3</option>
+            </select>
+
+            <label for="transkrip">Unggah Proposal Skripsi Anda</label>
+            <label class="upload51-btn">
+              <input type="file" id="transkrip" />
+              <span>📤 Upload file</span>
+            </label>
+
+            <button id="submit51-jadwal" class="submit51-btn">Kirim</button>
+          </div>
+        </div>
+
+        <div id="quest-alert9" class="quest-alert9">
+          <p>Quest Level 5 telah diselesaikan, <span>+200 XP</span></p>
+        </div>
+        <div id="quest-alert10" class="quest-alert10">
+          <p>Quest Level 6 Telah dibuka!</p>
+        </div>
       </main>
     </div>
     <script src="script.js"></script>
