@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard BIMA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
+      <nav class="menu">
+        <a href="#"><img src="assets/icon-dashboard.png" alt=""> Dashboard</a>
+        <a href="#" ><img src="assets/icon-mahasiswa.png" alt=""> Mahasiswa</a>
+        <a href="#"class="active"><img src="assets/icon-bimbingan.png" alt=""> Bimbingan</a>
+      </nav>
+      <a class="logout" href="#"><img src="assets/icon-logout.png" alt=""> Logout</a>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <header>
+        <div></div>
+        <div class="top-right-icons">
+          <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
+          <img src="assets/dashboard-profile.png" alt="Profile" class="profile-image" />
+        </div>
+      </header>
+
+      <section class="mahasiswa-section">
+        <h2>Daftar Mahasiswa Bimbingan</h2>
+
+        <div class="total-box">
+          <div>
+            <div>Proses Bimbingan</div>
+            <h1>20</h1>
+          </div>
+          <img src="assets/icon-prosesbimbingan.png" alt="icon" />
+        </div>
+
+        <div class="search-bar">
+          <input type="text" placeholder="Cari Mahasiswa..." />
+          <button><i class="fa fa-search"></i> Search</button>
+        </div>
+
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>NPM</th>
+                <th>Nama</th>
+                <th>Judul Skripsi</th>
+                <th>Jenis Bimbingan</th>
+                <th>Waktu Bimbingan</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td>23081010056</td>
+              <td>Berlian Ika Isabela</td>
+              <td>Website Gamifikasi SD</td>
+              <td>Review Draft</td>
+              <td>8 Juni 2025, 08:00</td>
+              <td><span class="status pending">Menunggu</span></td>
+              <td>
+                <i class="fa fa-check icon-success"></i>
+                <i class="fa fa-times icon-danger"></i>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>23081010061</td>
+              <td>Lucky Fitrianda Wahyudi</td>
+              <td>Sistem Rekomendasi Buku</td>
+              <td>Offline Meet</td>
+              <td>8 Juni 2025, 10:00</td>
+              <td><span class="status pending">Menunggu</span></td>
+              <td>
+                <i class="fa fa-check icon-success"></i>
+                <i class="fa fa-times icon-danger"></i>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>23081010162</td>
+              <td>Muhammad Irsyad Majid</td>
+              <td>Aplikasi Keuangan Mahasiswa</td>
+              <td>Online Meet</td>
+              <td>7 Juni 2025, 11:00</td>
+              <td><span class="status pending">Menunggu</span></td>
+              <td>
+                <i class="fa fa-check icon-success"></i>
+                <i class="fa fa-times icon-danger"></i>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>23081010075</td>
+              <td>Salsabila Khairunnisa</td>
+              <td>Pengenalan Angka Interaktif untuk Anak</td>
+              <td>Review Draft</td>
+              <td>7 Juni 2025, 13:00</td>
+              <td><span class="status accepted">Diterima</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>23081010123</td>
+              <td>Farhan Pratama</td>
+              <td>Chatbot Konseling Mahasiswa</td>
+              <td>Online Meet</td>
+              <td>7 Juni 2025, 13:00</td>
+              <td><span class="status rejected">Ditolak</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>23081010141</td>
+              <td>Nurul Aulia Safitri</td>
+              <td>Sistem Absensi Berbasis Lokasi</td>
+              <td>Offline Meet</td>
+              <td>5 Juni 2025, 09:00</td>
+              <td><span class="status accepted">Diterima</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>23081010189</td>
+              <td>Rafi Alfarezi</td>
+              <td>Aplikasi Pemantauan Tugas Harian</td>
+              <td>Online Meet</td>
+              <td>5 Juni 2025, 10:00</td>
+              <td><span class="status accepted">Diterima</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>23081010143</td>
+              <td>Syifa Nadira</td>
+              <td>Sistem Informasi Panti Asuhan</td>
+              <td>Review Draft</td>
+              <td>5 Juni 2025, 13:00</td>
+              <td><span class="status rejected">Ditolak</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>23081010047</td>
+              <td>Fajar Nurrahman</td>
+              <td>Sistem Tracking Skripsi Mahasiswa</td>
+              <td>Offline Meet</td>
+              <td>4 Juni 2025, 14:00</td>
+              <td><span class="status accepted">Diterima</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>23081010141</td>
+              <td>Nurul Aulia Safitri</td>
+              <td>Aplikasi Pembelajaran Matematika</td>
+              <td>Offline Meet</td>
+              <td>4 Juni 2025, 10:00</td>
+              <td><span class="status accepted">Diterima</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>23081010155</td>
+              <td>Rani Maulidya</td>
+              <td>Portal Beasiswa Mahasiswa</td>
+              <td>Online Meet</td>
+              <td>3 Juni 2025, 09:00</td>
+              <td><span class="status accepted">Diterima</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>23081010156</td>
+              <td>Fikri Ramadhan</td>
+              <td>Dashboard Monitoring Proyek</td>
+              <td>Offline Meet</td>
+              <td>3 Juni 2025, 13:00</td>
+              <td><span class="status rejected">Ditolak</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>23081010157</td>
+              <td>Indah Puspita</td>
+              <td>Aplikasi Manajemen UKM</td>
+              <td>Review Draft</td>
+              <td>2 Juni 2025, 09:00</td>
+              <td><span class="status pending">Menunggu</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>23081010158</td>
+              <td>Aditya Nugraha</td>
+              <td>Platform Kelas Online</td>
+              <td>Offline Meet</td>
+              <td>2 Juni 2025, 11:00</td>
+              <td><span class="status accepted">Diterima</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>23081010159</td>
+              <td>Putri Azzahra</td>
+              <td>Sistem Reservasi Kelas</td>
+              <td>Online Meet</td>
+              <td>1 Juni 2025, 10:00</td>
+              <td><span class="status rejected">Ditolak</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>23081010160</td>
+              <td>Dina Novita</td>
+              <td>Aplikasi Laporan Keuangan</td>
+              <td>Review Draft</td>
+              <td>1 Juni 2025, 13:00</td>
+              <td><span class="status pending">Menunggu</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>23081010161</td>
+              <td>Yusuf Arifin</td>
+              <td>Sistem Evaluasi Dosen</td>
+              <td>Offline Meet</td>
+              <td>31 Mei 2025, 09:00</td>
+              <td><span class="status accepted">Diterima</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>23081010162</td>
+              <td>Nia Kurniawati</td>
+              <td>Aplikasi Agenda Bimbingan</td>
+              <td>Online Meet</td>
+              <td>31 Mei 2025, 11:00</td>
+              <td><span class="status rejected">Ditolak</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td>23081010163</td>
+              <td>Rizky Septian</td>
+              <td>Platform Tanya Jawab Kampus</td>
+              <td>Review Draft</td>
+              <td>30 Mei 2025, 10:00</td>
+              <td><span class="status pending">Menunggu</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>23081010164</td>
+              <td>Shafa Nuraini</td>
+              <td>Monitoring Kehadiran Online</td>
+              <td>Offline Meet</td>
+              <td>30 Mei 2025, 13:00</td>
+              <td><span class="status accepted">Diterima</span></td>
+              <td>
+                <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+              </td>
+            </tr>
+            </tbody>
+            </tbody>
+          </table>
+
+          <div class="table-info">Menampilkan 1–20 dari 999 data</div>
+
+          <div class="pagination">
+            <button disabled>&lt;</button>
+            <button>&gt;</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
