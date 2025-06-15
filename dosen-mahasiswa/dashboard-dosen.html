@@ -1,149 +1,321 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard BIMA</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="dashboard-container">
-    
     <!-- SIDEBAR -->
     <aside class="sidebar">
       <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
       <nav class="menu">
-        <a href="../dashboard/dashboard.html"><img src="assets/icon-dashboard.png" class="active" alt="" /> Dashboard</a>
-        <a href="../peta/peta.html"><img src="assets/icon-mahasiswa.png" alt="" /> Mahasiswa</a>
-        <a href="../peringkat/peringkat.html"><img src="assets/icon-bimbingan.png" alt="" /> Bimbingan</a>
+        <a href="#"><img src="assets/icon-dashboard.png" alt=""> Dashboard</a>
+        <a href="#" class="active"><img src="assets/icon-mahasiswa.png" alt=""> Mahasiswa</a>
+        <a href="#"><img src="assets/icon-bimbingan.png" alt=""> Bimbingan</a>
       </nav>
-      <a class="logout" href="../login/1/login1.html"><img src="assets/icon-logout.png" alt="" /> Logout</a>
+      <a class="logout" href="#"><img src="assets/icon-logout.png" alt=""> Logout</a>
     </aside>
 
     <!-- MAIN -->
     <main class="main">
-        <header>
-            <div></div> <!-- Placeholder agar layout tetap seimbang -->
-            <div class="top-right-icons">
-              <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
-              <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
-              <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
-            </div>
-             </header>
+      <header>
+        <div></div>
+        <div class="top-right-icons">
+          <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
+          <img src="assets/dashboard-profile.png" alt="Profile" class="profile-image" />
+        </div>
+      </header>
 
-        <section class="dashboard-content">
-  <h2>Selamat Datang, Pratama Wirya Atmaja, S.Kom., M.Kom!</h2>
+      <section class="mahasiswa-section">
+        <h2>Daftar Mahasiswa Bimbingan</h2>
 
-  <div class="summary-cards">
-    <div class="card purple">
-      <h3>Total Mahasiswa Bimbingan</h3>
-      <p>23</p>
-    </div>
-    <div class="card purple">
-      <h3>Proses Bimbingan</h3>
-      <p>20</p>
-    </div>
-    <div class="card purple">
-      <h3>Sudah Sidang</h3>
-      <p>3</p>
-    </div>
-  </div>
+        <div class="total-box">
+          <div>
+            <div>Total Mahasiswa Bimbingan</div>
+            <h1>23</h1>
+          </div>
+          <img src="assets/icon-totalmahasiswa.png" alt="icon" />
+        </div>
 
-  <div class="dashboard-grid">
-    <div class="chart-card">
-      <h4>Grafik Bimbingan</h4>
-      <canvas id="barChart"></canvas>
-    </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Cari Mahasiswa..." />
+          <button><i class="fa fa-search"></i> Search</button>
+        </div>
 
-    <div class="chart-card">
-      <h4>Statistik Mahasiswa</h4>
-      <canvas id="pieChart"></canvas>
-    </div>
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>NPM</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Nomor Telepon</th>
+                <th>Alasan Permintaan</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>23081010061</td>
+                <td>Lucky Fitrianda Wahyudi</td>
+                <td>23081010061@student.upnjatim.ac.id</td>
+                <td>081234567890</td>
+                <td><a href="#">Lihat Alasan</a></td>
+                <td><span class="status pending">Menunggu</span></td>
+                <td>
+                  <i class="fa fa-check icon-success"></i>
+                  <i class="fa fa-times icon-danger"></i>
+                  <a href="#">Lihat Detail</a>
+                </td>
+              </tr>
+              <tr>
+            <td>2</td>
+            <td>23081010056</td>
+            <td>Berlian Ika Isabela</td>
+            <td>23081010056@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status accepted">Diterima</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>23081010162</td>
+            <td>Muhammad Irsyad Majid</td>
+            <td>23081010162@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status rejected">Ditolak</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>23081010108</td>
+            <td>Salsabila Dwi Ramadhani</td>
+            <td>23081010108@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status accepted">Diterima</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>23081010124</td>
+            <td>Naufal Rizky Pratama</td>
+            <td>23081010124@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status accepted">Diterima</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>23081010079</td>
+            <td>Putri Ayu Lestari</td>
+            <td>23081010079@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status accepted">Diterima</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>23081010119</td>
+            <td>Reza Fahmi Nurrohman</td>
+            <td>23081010119@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status accepted">Diterima</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>23081010083</td>
+            <td>Intan Meliani Kusuma</td>
+            <td>23081010083@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status accepted">Diterima</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>23081010092</td>
+            <td>Dimas Yoga Septian</td>
+            <td>23081010092@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status rejected">Ditolak</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>23081010131</td>
+            <td>Nadya Khairun Nisa</td>
+            <td>23081010131@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status accepted">Diterima</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>23081010145</td>
+            <td>Fahmi Rizqullah</td>
+            <td>23081010145@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status pending">Menunggu</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>23081010146</td>
+            <td>Yolanda Nur Azizah</td>
+            <td>23081010146@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status accepted">Diterima</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>23081010147</td>
+            <td>Hafidz Nur Rohman</td>
+            <td>23081010147@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status rejected">Ditolak</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>23081010148</td>
+            <td>Sheila Anjani</td>
+            <td>23081010148@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status accepted">Diterima</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>23081010149</td>
+            <td>Faris Baihaqi</td>
+            <td>23081010149@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status accepted">Diterima</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>23081010150</td>
+            <td>Rizka Nurhaliza</td>
+            <td>23081010150@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status pending">Menunggu</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>23081010151</td>
+            <td>Ammar Dzaky</td>
+            <td>23081010151@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status accepted">Diterima</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>23081010152</td>
+            <td>Annisa Maulida</td>
+            <td>23081010152@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status accepted">Diterima</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>23081010153</td>
+            <td>Vicky Ramadhan</td>
+            <td>23081010153@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status rejected">Ditolak</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>23081010154</td>
+            <td>Indah Kurniawati</td>
+            <td>23081010154@student.upnjatim.ac.id</td>
+            <td>081234567890</td>
+            <td><a href="#">Lihat Alasan</a></td>
+            <td><span class="status accepted">Diterima</span></td>
+            <td>
+              <a href="#"><i class="fa fa-search"></i> Lihat Detail</a>
+            </td>
+          </tr>
+        </tbody>
+            </tbody>
+          </table>
 
-    <div class="status-boxes">
-      <div class="status-box">Judul Belum Disetujui<br /><strong>12</strong></div>
-      <div class="status-box">Bimbingan Belum Disetujui<br /><strong>12</strong></div>
-      <div class="status-box">Sempro Belum Disetujui<br /><strong>12</strong></div>
-      <div class="status-box">Semhas Belum Disetujui<br /><strong>12</strong></div>
-    </div>
-  </div>
+          <div class="table-info">Menampilkan 1–20 dari 999 data</div>
 
-  <h3>Bimbingan Mendatang</h3>
-  <table class="custom-table">
-    <thead>
-      <tr>
-        <th>NPM</th>
-        <th>Nama Mahasiswa</th>
-        <th>Jenis Permintaan</th>
-        <th>Tanggal</th>
-        <th>Aksi</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>2308100306</td>
-        <td>Berlian Ika Isabela</td>
-        <td>ACC Bimbingan</td>
-        <td>1 Juni 2025</td>
-        <td><a href="#">Lihat Detail</a></td>
-      </tr>
-      <tr>
-        <td>2308100601</td>
-        <td>Lucky Fitrianda Wahyudi</td>
-        <td>ACC Judul</td>
-        <td>1 Juni 2025</td>
-        <td><a href="#">Lihat Detail</a></td>
-      </tr>
-      <tr>
-        <td>2308101042</td>
-        <td>Muhammad Irsyad Majid</td>
-        <td>ACC Sempro</td>
-        <td>1 Juni 2025</td>
-        <td><a href="#">Lihat Detail</a></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-          </header>
+          <div class="pagination">
+            <button disabled>&lt;</button>
+            <button>&gt;</button>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  const barCtx = document.getElementById('barChart');
-  new Chart(barCtx, {
-    type: 'bar',
-    data: {
-      labels: ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat'],
-      datasets: [{
-        label: 'Jumlah Bimbingan',
-        data: [5, 15, 15, 12, 9],
-        backgroundColor: '#7c4dff'
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: { legend: { display: false } }
-    }
-  });
-
-  const pieCtx = document.getElementById('pieChart');
-  new Chart(pieCtx, {
-    type: 'doughnut',
-    data: {
-      labels: ['Proses Bimbingan', 'Sudah Sidang'],
-      datasets: [{
-        data: [87, 13],
-        backgroundColor: ['#7c4dff', '#ffca28']
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: { legend: { position: 'bottom' } }
-    }
-  });
-</script>
-
 </body>
 </html>
