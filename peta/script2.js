@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const progress691Btn = document.getElementById("progress691-box");
   const questAlert691 = document.getElementById("quest-alert691");
   const questAlert692 = document.getElementById("quest-alert692");
+  const level10 = document.getElementById("level-10");
+  const popup10 = document.getElementById("popup-level10");
+  const nextQuestBtn10 = document.getElementById("after-popuplvl10");
+  const popup101 = document.getElementById("popup101-jadwal");
+  const submitBtn101 = document.getElementById("submit101-jadwal");
+  const questAlert101 = document.getElementById("quest-alert101");
 
   // Buka popup level 5
   level5?.addEventListener("click", () => {
@@ -50,6 +56,24 @@ document.addEventListener("DOMContentLoaded", function () {
     popup691.style.display = "none";
     showQuestAlert691();
     showQuestAlert692();
+  });
+
+  // Buka popup level 10
+  level10?.addEventListener("click", () => {
+    popup10.style.display = "flex";
+  });
+
+  // Tombol +200 XP: Tutup popup 2, buka popup 51
+  nextQuestBtn10?.addEventListener("click", () => {
+    popup10.style.display = "none";
+    popup101.style.display = "flex";
+  });
+
+  // Submit tombol form: tutup popup, tampilkan alert
+  submitBtn101?.addEventListener("click", (e) => {
+    e.preventDefault();
+    popup101.style.display = "none";
+    showQuestAlert101();
   });
 
   // Fungsi menampilkan notifikasi lvl 5
@@ -106,6 +130,21 @@ document.addEventListener("DOMContentLoaded", function () {
       // Bersihkan class hide setelah selesai animasi
       setTimeout(() => {
         questAlert692.classList.remove("hide");
+      }, 500);
+    }, 3000);
+  }
+
+  // Fungsi menampilkan notifikasi lvl 10
+  function showQuestAlert101() {
+    questAlert101.classList.add("show");
+
+    setTimeout(() => {
+      questAlert101.classList.remove("show");
+      questAlert101.classList.add("hide");
+
+      // Bersihkan class hide setelah selesai animasi
+      setTimeout(() => {
+        questAlert101.classList.remove("hide");
       }, 500);
     }, 3000);
   }

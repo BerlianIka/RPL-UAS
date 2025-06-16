@@ -878,7 +878,7 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -983,4 +983,41 @@ body {
 }
 .submit101-btn:hover {
   background-color: #977dd3;
+}
+
+/* QUEST ALERT 101*/
+/* Container */
+.quest-alert101 {
+  position: fixed;
+  top: 70px;
+  right: -400px; /* awalnya di luar layar */
+  width: 350px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 20px 0 0 20px;
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  color: #000;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* XP Highlight */
+.quest-alert101 span {
+  font-weight: 600;
+  color: #7a4de3;
+}
+
+/* Class untuk tampil */
+.quest-alert101.show {
+  right: 20px;
+  opacity: 1;
+}
+
+/* Class untuk sembunyi */
+.quest-alert101.hide {
+  right: -400px;
+  opacity: 0;
 }
