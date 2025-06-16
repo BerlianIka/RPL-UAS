@@ -26,13 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const popup41 = document.getElementById("popup41-container");
   const questAlert7 = document.getElementById("quest-alert7");
   const questAlert8 = document.getElementById("quest-alert8");
-  const level5 = document.getElementById("level-5");
-  const popup5 = document.getElementById("popup-level5");
-  const nextQuestBtn5 = document.getElementById("after-popuplvl5");
-  const popup51 = document.getElementById("popup51-jadwal");
-  const submitBtn51 = document.getElementById("submit51-jadwal");
-  const questAlert9 = document.getElementById("quest-alert9");
-  const questAlert10 = document.getElementById("quest-alert10");
+  
 
 
   // Buka popup level 1
@@ -45,12 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     popup1.style.display = "none";
     popup12.style.display = "flex";
   });
-
-  // Fungsi untuk menutup popup manapun
-  window.closePopup = function (popupId) {
-    const target = document.getElementById(popupId);
-    if (target) target.style.display = "none";
-  };
 
   // Submit tombol form: tutup popup, tampilkan alert
   submitBtn12?.addEventListener("click", (e) => {
@@ -116,26 +104,6 @@ document.addEventListener("DOMContentLoaded", function () {
       showQuestAlert7();
       showQuestAlert8();
   });
-
-  // Buka popup level 5
-  level5?.addEventListener("click", () => {
-    popup5.style.display = "flex";
-  });
-
-  // Tombol +200 XP: Tutup popup 2, buka popup 51
-  nextQuestBtn5?.addEventListener("click", () => {
-    popup5.style.display = "none";
-    popup51.style.display = "flex";
-  });
-
-  // Submit tombol form: tutup popup, tampilkan alert
-  submitBtn51?.addEventListener("click", (e) => {
-    e.preventDefault();
-    popup51.style.display = "none";
-    showQuestAlert9();
-    showQuestAlert10();
-  });
-
 
   // Fungsi menampilkan notifikasi lvl 1
   function showQuestAlert() {
@@ -252,33 +220,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 500);
     }, 3000);
   }
-
-  // Fungsi menampilkan notifikasi lvl 5
-  function showQuestAlert9() {
-    questAlert9.classList.add("show");
-
-    setTimeout(() => {
-      questAlert9.classList.remove("show");
-      questAlert9.classList.add("hide");
-
-      // Bersihkan class hide setelah selesai animasi
-      setTimeout(() => {
-        questAlert9.classList.remove("hide");
-      }, 500);
-    }, 3000);
-  }
-
-  function showQuestAlert10() {
-    questAlert10.classList.add("show");
-
-    setTimeout(() => {
-      questAlert10.classList.remove("show");
-      questAlert10.classList.add("hide");
-
-      // Bersihkan class hide setelah selesai animasi
-      setTimeout(() => {
-        questAlert10.classList.remove("hide");
-      }, 500);
-    }, 3000);
-  }
 });
+
+
+
+  // Fungsi untuk menutup popup manapun
+  window.closePopup = function (popupId) {
+    const target = document.getElementById(popupId);
+    if (target) target.style.display = "none";
+  };

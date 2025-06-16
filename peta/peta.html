@@ -105,16 +105,18 @@
 
           <div class="jalur bawah">
             <div class="level">
-              <img
-                src="assets/smoothcorner.png"
-                alt="Bintang"
-                class="bintang"
-              />
+              <a href="peta2.html">
+                <img
+                  src="assets/smoothcorner.png"
+                  alt="Bintang"
+                  class="bintang"
+                />
+              </a>
               <p><strong>The End?</strong><br />Wisuda Purnacita</p>
             </div>
             <div class="line2"></div>
             <div class="level">
-              <a href="level10/level10.html">
+              <a href="peta2.html">
                 <img
                   src="assets/smoothcorner.png"
                   alt="Bintang"
@@ -125,7 +127,7 @@
             </div>
             <div class="line2"></div>
             <div class="level">
-              <a href="level6/level9.html">
+              <a href="peta2.html">
                 <img
                   src="assets/smoothcorner.png"
                   alt="Bintang"
@@ -135,12 +137,14 @@
               <p><strong>Level 6 - 9</strong><br />Lembah Revisi Abadi</p>
             </div>
             <div class="line2"></div>
-            <div id="level-5" class="level">
-              <img
-                src="assets/smoothcorner.png"
-                alt="Bintang"
-                class="bintang"
-              />
+            <div class="level">
+              <a href="peta2.html">
+                <img
+                  src="assets/smoothcorner.png"
+                  alt="Bintang"
+                  class="bintang"
+                />
+              </a>
               <p><strong>Level 5</strong><br />Duel Proposal</p>
             </div>
           </div>
@@ -456,21 +460,19 @@
             </button>
             <h2>Hadiri tiga pertemuan awal</h2>
             <p>
-              Tinta pertama telah disiapkan, dan kertas awal terbentang. Inilah momen
-              di mana penyihir muda dan pembimbingnya membentuk ikatan. Awali pertemuan,
-              dengarkan wejangan, dan siapkan rancangan pertama petualanganmu.
+              Tinta pertama telah disiapkan, dan kertas awal terbentang. Inilah
+              momen di mana penyihir muda dan pembimbingnya membentuk ikatan.
+              Awali pertemuan, dengarkan wejangan, dan siapkan rancangan pertama
+              petualanganmu.
             </p>
 
-            <div id="progress41-box" class="progress-box">
+            <button id="progress41-box" class="progress-box" type="button">
               <div class="progress-icon">
                 <img src="assets/quest-lvl4.png" alt="Star Icon" />
               </div>
-              <div class="progress-text">
-                Lakukan 3 bimbingan awal
-              </div>
-              <div class="progress-count">
-                0/3 Bimbingan
-              </div>
+              <div class="progress-text">Lakukan 3 bimbingan awal</div>
+              <div class="progress-count">0/3 Bimbingan</div>
+            </button>
           </div>
         </div>
 
@@ -480,95 +482,6 @@
         <div id="quest-alert8" class="quest-alert8">
           <p>Quest Level 5 Telah dibuka!</p>
         </div>
-
-        <!-- LEVEL 5 -->
-        <div id="popup-level5" class="popup5-container" style="display: none">
-          <div class="popup5-content">
-            <button class="close5-popup" onclick="closePopup('popup-level5')">
-              ✖
-            </button>
-            <div class="popup5-flex">
-              <div class="popup5-character">
-                <img src="assets/icon-lvl5.png" alt="Penyihir" />
-              </div>
-              <div class="popup5-info">
-                <h2>Level 5 – Duel Proposal</h2>
-                <p>
-                  Di puncak Menara Teori, para Penjaga Akademik menantimu.
-                  Mereka siap menilai kekuatan nalar dan logika dari mantra
-                  skripsimu. Siapkan dirimu, karena setiap pertanyaan akan
-                  menguji kesiapan dan konsistensimu sebagai calon Sarjana
-                  Arcanum.
-                </p>
-                <p class="quest5-label">Quest:</p>
-
-                <div class="quest5-box">
-                  <div class="quest5-left">
-                    <div class="quest5-icon">
-                      <img src="assets/quest-lvl5.png" alt="Star Icon" />
-                    </div>
-                    <div class="quest5-text">
-                      <strong>Ajukan mantra judulmu</strong>
-                      <p>Ajukan dan validasi judul skripsi</p>
-                    </div>
-                  </div>
-                  <div id="after-popuplvl5" class="quest5-xp">+200 XP</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Form Sidang Proposal -->
-        <div id="popup51-jadwal" class="popup51-jadwal-container">
-          <div class="popup51-jadwal-content">
-            <button
-              class="close51-popup-btn"
-              onclick="closePopup('popup51-jadwal')"
-            >
-              ✖
-            </button>
-            <h2>Memasuki arena sidang proposal</h2>
-            <p>
-              Tiba saatnya memasuki arena ujian. Para Penjaga Akademik telah
-              menunggu, dan proposalmu akan diuji dalam cahaya logika dan badai
-              pertanyaan. Siapkan keberanian, ini adalah langkah penting menuju
-              pengakuan.
-            </p>
-
-            <label for="judul 1">Judul Skripsi Anda</label>
-            <input
-              type="text"
-              id="alasan1"
-              placeholder="Isi judul skripsi anda"
-            />
-
-            <!-- jadwal sidang -->
-            <label for="jadwal">Jadwal Seminar Proposal</label>
-            <select id="jadwal">
-              <option value="">--- jadwal ---</option>
-              <option value="jadwal1">jadwal1</option>
-              <option value="jadwal2">jadwal 2</option>
-              <option value="jadwal3">jadwal 3</option>
-            </select>
-
-            <label for="transkrip">Unggah Proposal Skripsi Anda</label>
-            <label class="upload51-btn">
-              <input type="file" id="transkrip" />
-              <span>📤 Upload file</span>
-            </label>
-
-            <button id="submit51-jadwal" class="submit51-btn">Kirim</button>
-          </div>
-        </div>
-
-        <div id="quest-alert9" class="quest-alert9">
-          <p>Quest Level 5 telah diselesaikan, <span>+200 XP</span></p>
-        </div>
-        <div id="quest-alert10" class="quest-alert10">
-          <p>Quest Level 6 Telah dibuka!</p>
-        </div>
-                
       </main>
     </div>
     <script src="script.js"></script>
