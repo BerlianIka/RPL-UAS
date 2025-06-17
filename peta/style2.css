@@ -1021,3 +1021,277 @@ body {
   right: -400px;
   opacity: 0;
 }
+
+/* Level END */
+.popup12-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup12-content {
+  background: rgba(245, 243, 243, 0.363);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* untuk Safari */
+  border-radius: 25px;
+  padding: 2rem;
+  max-width: 980px;
+  width: 70%;
+  height: 400px;
+  color: white;
+  position: relative;
+}
+
+.close12-popup {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.popup12-flex {
+  display: flex;
+  gap: 2rem;
+}
+
+.popup12-character img {
+  max-width: 250px;
+  height: auto;
+  margin-top: -25px;
+}
+
+.popup12-info h2 {
+  color: #f6ac32;
+  margin-top: 10px;
+}
+
+.popup12-info p {
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+.quest12-label {
+  color: #f6ac32;
+  font-weight: bold;
+  margin-top: 80px;
+}
+
+.quest12-box {
+  background: #6a46d1;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quest12-box:hover {
+  background: #7a5bd8;
+}
+
+.quest12-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quest12-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.quest12-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #eaeaea;
+}
+
+.quest12-xp {
+  background: #f6ac32;
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* FORM SUBMIT RITUS AKADEMIK */
+/* Container */
+.popup121-jadwal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Content */
+.popup121-jadwal-content {
+  background: rgba(245, 243, 243, 0.363);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 2rem;
+  max-width: 1000px;
+  width: 90%;
+  height: 440px;
+  color: white;
+  position: relative;
+}
+
+/* Close Button */
+.close121-popup-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Heading & Paragraph */
+.popup121-jadwal-content h2 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #f4a825;
+  margin-bottom: 0.2rem;
+}
+.popup121-jadwal-content p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  padding-top: 0.1rem;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Form Elements */
+.popup121-jadwal-content label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.1rem;
+  margin-top: 0.5rem;
+}
+
+.popup121-jadwal-content select,
+.popup121-jadwal-content input[type="text"] {
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Tombol Upload File */
+.upload121-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.8rem 2rem;
+  border: 1.5px solid #a472f5;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #a472f5;
+  cursor: pointer;
+  margin-top: -2rem;
+  transition: background 0.2s ease;
+  background-color: transparent;
+  width: fit-content;
+  max-width: 300px;
+  white-space: nowrap;
+}
+.upload121-btn:hover {
+  background: rgba(164, 114, 245, 0.1);
+}
+.upload121-btn input[type="file"] {
+  display: none;
+}
+
+/* Submit Button */
+.submit121-btn {
+  margin-top: -2rem;
+  background-color: #b095e4;
+  color: white;
+  border: none;
+  padding: 0.5rem 2.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  float: right;
+}
+.submit121-btn:hover {
+  background-color: #977dd3;
+}
+
+/* Overlay belakang */
+.quest-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* latar gelap */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+}
+
+/* Gambar */
+.quest-img {
+  width: 700px; /* sesuaikan ukuran */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -400px;
+  opacity: 0;
+}
+
+/* Animasi */
+@keyframes imgSlideInOut {
+  0% {
+    left: -400px;
+    opacity: 0;
+  }
+  20% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  80% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    left: 120%;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+}
+
+.quest-img.animate {
+  animation: imgSlideInOut 5s ease-in-out forwards;
+}

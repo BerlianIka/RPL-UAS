@@ -19,6 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const popup101 = document.getElementById("popup101-jadwal");
   const submitBtn101 = document.getElementById("submit101-jadwal");
   const questAlert101 = document.getElementById("quest-alert101");
+  const level12 = document.getElementById("level-12");
+  const popup12 = document.getElementById("popup-level12");
+  const nextQuestBtn12 = document.getElementById("after-popuplvl12");
+  const popup121 = document.getElementById("popup121-jadwal");
+  const submitBtn121 = document.getElementById("submit121-jadwal");
+  const overlay = document.getElementById("quest-overlay");
+  const image = document.getElementById("quest-img");
 
   // Buka popup level 5
   level5?.addEventListener("click", () => {
@@ -74,6 +81,24 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     popup101.style.display = "none";
     showQuestAlert101();
+  });
+
+  // Buka popup level end
+  level12?.addEventListener("click", () => {
+    popup12.style.display = "flex";
+  });
+
+  // Tombol +200 XP: Tutup popup 2, buka popup 51
+  nextQuestBtn12?.addEventListener("click", () => {
+    popup12.style.display = "none";
+    popup121.style.display = "flex";
+  });
+
+  // Event saat tombol "Kirim" diklik
+  submitBtn121.addEventListener("click", function (e) {
+    e.preventDefault(); 
+    popup121.style.display = "none";
+    showQuestImage(); 
   });
 
   // Fungsi menampilkan notifikasi lvl 5
@@ -147,6 +172,21 @@ document.addEventListener("DOMContentLoaded", function () {
         questAlert101.classList.remove("hide");
       }, 500);
     }, 3000);
+  }
+
+  // Fungsi animasi gambar notifikasi
+  function showQuestImage() {
+    overlay.style.display = "flex";
+
+    // Reset animasi agar bisa diulang
+    image.classList.remove("animate");
+    void image.offsetWidth;
+    image.classList.add("animate");
+
+    // Sembunyikan overlay setelah animasi selesai
+    setTimeout(() => {
+      overlay.style.display = "none";
+    }, 3000); 
   }
 });
 

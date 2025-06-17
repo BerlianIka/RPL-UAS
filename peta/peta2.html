@@ -112,7 +112,7 @@
           <div class="line-vertical"></div>
 
           <div class="jalur bawah">
-            <div id="end" class="level">
+            <div id="level-12" class="level">
               <img
                 src="assets/smoothcorner.png"
                 alt="Bintang"
@@ -364,9 +364,10 @@
             </button>
             <h2>Tantang ruang pengujian terakhir</h2>
             <p>
-              Lingkaran Penguji telah terbentuk. Di sinilah segala hal yang kau 
-              pelajari diuji dalam pertempuran intelektual. Hadapi mereka dengan 
-              penuh keyakinan. Kini saatnya membuktikan bahwa kau layak menjadi Sarjana Arcanum.
+              Lingkaran Penguji telah terbentuk. Di sinilah segala hal yang kau
+              pelajari diuji dalam pertempuran intelektual. Hadapi mereka dengan
+              penuh keyakinan. Kini saatnya membuktikan bahwa kau layak menjadi
+              Sarjana Arcanum.
             </p>
 
             <label for="judul 1">Judul Skripsi Anda</label>
@@ -396,10 +397,111 @@
         </div>
 
         <div id="quest-alert101" class="quest-alert101">
-          <p>Jadwal telah ditetapkan, silahkan persiapkan diri
-            untuk seminar hasil di jadwal tersebut.</p>
+          <p>
+            Jadwal telah ditetapkan, silahkan persiapkan diri untuk seminar
+            hasil di jadwal tersebut.
+          </p>
         </div>
 
+        <!-- LEVEL END -->
+        <div id="popup-level12" class="popup12-container">
+          <div class="popup12-content">
+            <button class="close12-popup" onclick="closePopup('popup-level12')">
+              ✖
+            </button>
+            <div class="popup12-flex">
+              <div class="popup12-character">
+                <img src="assets/icon-lvlend.png" alt="Penyihir" />
+              </div>
+              <div class="popup12-info">
+                <h2>The END? - Wisuda Purnacita</h2>
+                <p>
+                  Dengan semua ritus terlampaui, satu langkah terakhir
+                  menunggumu. Mengukuhkan gelar dan menerima mahkota kebanggaan.
+                  Saat jubah kebesaran disematkan dan namamu dipanggil, Akademia
+                  Arcana mengenangmu sebagai legenda baru dalam sejarahnya.
+                </p>
+                <p class="quest12-label">Quest:</p>
+
+                <div class="quest12-box">
+                  <div class="quest12-left">
+                    <div class="quest12-icon">
+                      <img src="assets/quest-lvlend.png" alt="Star Icon" />
+                    </div>
+                    <div class="quest12-text">
+                      <strong>Kunci akhir ritus akademik</strong>
+                      <p>Daftarkan diri untuk wisuda.</p>
+                    </div>
+                  </div>
+                  <div id="after-popuplvl12" class="quest12-xp">+9999 XP</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Unggah Ritus Akademik -->
+        <div id="popup121-jadwal" class="popup121-jadwal-container">
+          <div class="popup121-jadwal-content">
+            <button
+              class="close121-popup-btn"
+              onclick="closePopup('popup121-jadwal')"
+            >
+              ✖
+            </button>
+            <h2>Kunci akhir ritus akademik</h2>
+            <p>
+              Langkahkan kakimu menuju upacara agung. Klik di sini untuk
+              mengunci ritus terakhir dan daftarkan dirimu dalam sejarah
+              Akademia!
+            </p>
+
+            <label for="judul 1">Judul Skripsi Anda</label>
+            <input
+              type="text"
+              id="alasan1"
+              placeholder="Isi judul skripsi anda"
+            />
+
+            <!-- jadwal sidang -->
+            <label for="jadwal">Pilih Jadwal Yudisium</label>
+            <select id="jadwal">
+              <option value="">--- jadwal ---</option>
+              <option value="jadwal1">jadwal1</option>
+              <option value="jadwal2">jadwal 2</option>
+              <option value="jadwal3">jadwal 3</option>
+            </select>
+
+            <label for="SKL">Unggah Surat Keterangan Lulus</label>
+
+            <!-- Upload File 1 -->
+            <label class="upload121-btn">
+              <input type="file" id="transkrip" />
+              <span>📤 Upload Skripsi Final</span>
+            </label>
+
+            <label for="foto">Unggah Pas Foto 3x2</label>
+
+            <!-- Upload File 2 -->
+            <label class="upload121-btn">
+              <input type="file" id="lampiran" />
+              <span>📤 Upload Lampiran Pendukung</span>
+            </label>
+
+            <button id="submit121-jadwal" class="submit121-btn">Kirim</button>
+          </div>
+        </div>
+
+        <!-- Overlay Gelap -->
+        <div id="quest-overlay" class="quest-overlay">
+          <!-- Gambar Notifikasi -->
+          <img
+            src="assets/Ending.png"
+            alt="Notifikasi"
+            id="quest-img"
+            class="quest-img"
+          />
+        </div>
       </main>
     </div>
     <script src="script2.js"></script>
