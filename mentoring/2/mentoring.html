@@ -13,11 +13,11 @@
     <aside class="sidebar">
       <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
       <nav class="menu">
-        <a href="../dashboard/dashboard.html"><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
-        <a href="../peta/peta.html"><img src="assets/icon-map.png" alt="" /> Peta</a>
-        <a href="../mentoring/mentoring.html" class="active"><img src="assets/icon-bimbingan.png" alt="" /> Mentoring</a>
-        <a href="../peringkat/peringkat.html"><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a>
-        <a href="../library/library.html"><img src="assets/icon-library.png" alt="" /> Library</a>
+        <a href="../../dashboard/dashboard.html"><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
+        <a href="../../peta/peta.html"><img src="assets/icon-map.png" alt="" /> Peta</a>
+        <a href="../../mentoring/mentoring.html" class="active"><img src="assets/icon-bimbingan.png" alt="" /> Mentoring</a>
+        <a href="../../peringkat/peringkat.html"><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a>
+        <a href="../../library/library.html"><img src="assets/icon-library.png" alt="" /> Library</a>
       </nav>
       <a class="logout" href="../login/1/login1.html"><img src="assets/icon-logout.png" alt="" /> Logout</a>
     </aside>
@@ -43,15 +43,15 @@
   <h2 class="pengajuan-title">Pilih Pengajuan Mentoring</h2>
   <div class="pengajuan-options">
   <div class="pengajuan-options">
-    <div class="option-card">
+    <div id="review" class="option-card">
       <img src="assets/review-draf.png" alt="Review Draft" />
       <p>Review Draft</p>
     </div>
-    <div class="option-card">
+    <div id="offline" class="option-card">
       <img src="assets/meet-offline.png" alt="Offline Meet" />
       <p>Offline Meet</p>
     </div>
-    <div class="option-card">
+    <div id="online" class="option-card">
       <img src="assets/meet-online.png" alt="Online Meet" />
       <p>Online Meet</p>
     </div>
@@ -60,5 +60,30 @@
 
     </main>
   </div>
+
+  <script>
+    // dari mentoring ke review
+document.querySelector('#review').addEventListener('click', function () {
+  window.location.href = '../darf/mentoring.html';
+});
+
+// dari mentoring ke offline
+document.querySelector('#offline').addEventListener('click', function () {
+  window.location.href = '../c/mentoring.html';
+});
+
+// dari mentoring ke offline
+document.querySelector('#online').addEventListener('click', function () {
+  window.location.href = '../c/mentoring.html';
+});
+
+// Klik ke halaman mentoring ke riwayat
+document.querySelector(".back-button").addEventListener("click", function () {
+  window.location.href = "../1/mentoring.html";
+ });
+
+
+
+  </script>
 </body>
 </html>

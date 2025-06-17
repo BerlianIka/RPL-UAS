@@ -210,8 +210,8 @@ header {
 .maskot-wrapper {
   position: absolute;
   bottom: 40px;
-  right: 60px;
-  width: 250px;
+  right: 80px;
+  width: 280px;
 }
 
 .maskot {
@@ -223,7 +223,7 @@ header {
   position: absolute;
   bottom: 100%;
   left: 50%;
-  transform: translateX(-50%) translateY(-20px);
+  transform: translateX(-70%) translateY(-20px);
   background-color: #ffffff;
   border-radius: 12px;
   padding: 12px 16px;
