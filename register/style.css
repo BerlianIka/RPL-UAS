@@ -85,24 +85,32 @@ input {
   justify-content: center;
 }
 
-.eye {
+.eye-icon {
+  width: 20px;
+  height: 20px;
   position: absolute;
-  right: 10px;
   top: 50%;
+  right: 10px;
   transform: translateY(-50%);
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
+  transition: opacity 0.2s ease;
 }
 
-.eye:hover svg {
-  opacity: 0.8;
+.eye-closed {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.eye.show-closed .eye-open {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.eye.show-closed .eye-closed {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .forgot {

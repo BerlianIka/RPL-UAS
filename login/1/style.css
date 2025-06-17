@@ -147,6 +147,7 @@ button[type="submit"]:hover {
   height: 100%;
   pointer-events: none;
 }
+/* PASSWORD TOGGLE ICON */
 .eye-icon {
   width: 20px;
   height: 20px;

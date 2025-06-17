@@ -183,8 +183,8 @@
     }
 
     .profile-photo {
-      width: 120px;
-      height: 120px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 10px;
@@ -200,16 +200,16 @@
     }
 
 .save-button {
-  padding: 10px 60px;
+  padding: 10px 120px;
   border: none;
-  border-radius: 25px; /* Ubah ke 25px agar lebih oval */
+  border-radius: 10px; /* Ubah ke 25px agar lebih oval */
   background-color: #c9aaff;
   color: white;
   font-weight: bold;
   cursor: pointer;
   display: block;
   width: fit-content;
-  margin-left: auto; /* Geser ke kanan */
+  margin-left: 90%; /* Geser ke kanan */
 }
 
     @media (max-width: 768px) {
@@ -230,7 +230,29 @@
         width: 100%;
       }
     }
-  </style>
+    .form-group {
+  margin-bottom: 20px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px; /* Jarak antar radio */
+  margin-top: 8px;
+}
+
+.radio-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Jarak antara bulatan dan teks */
+  font-size: 14px;
+  color: white; /* atau #444 jika di form terang */
+}
+
+.radio-inline input[type="radio"] {
+  accent-color: white; /* untuk warna bulatannya */
+  cursor: pointer;
+}
+</style>
 </head>
 <body>
   <div class="dashboard-container">
@@ -284,13 +306,17 @@
                 <input type="password" id="password" value="password" />
                 <i class="fa-solid fa-pen edit-icon"></i>
               </div>
-              <div class="form-group">
-                <label>Jenis Kelamin</label>
-                <div class="radio-group">
-                  <label for="male"><input type="radio" name="gender" id="male" /> Laki-Laki</label>
-                  <label for="female"><input type="radio" name="gender" id="female" checked /> Perempuan</label>
-                </div>
+            <div class="form-group">
+              <label for="gender">Jenis Kelamin</label>
+              <div class="radio-group">
+                <label class="radio-inline">
+                  <input type="radio" name="gender" value="Laki-Laki" /> Laki-Laki
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="gender" value="Perempuan" /> Perempuan
+                </label>
               </div>
+            </div>
               <button type="submit" class="save-button">Simpan</button>
             </form>
           </div>
