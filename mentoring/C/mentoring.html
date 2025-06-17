@@ -24,7 +24,6 @@
 
     <!-- MAIN CONTENT -->
     <main class="main">
-      
       <header>
         <div></div>
         <div class="top-right-icons">
@@ -37,27 +36,41 @@
   <button class="back-button">
     <img src="assets/icon-back.png" alt="Kembali" />
   </button>
+  <h2 class="page-title">Pengajuan Mentoring</h2>
+</div>
+<div class="mentoring-form-container">
+        <form class="mentoring-form">
+          <label>Judul Mentoring</label>
+          <input type="text" placeholder="Masukkan Judul Mentoring" />
+
+          <label>Pilih Dosen Pembimbing</label>
+          <select>
+            <option>--- Dosen Pembimbing ---</option>
+            <option>1. Pratama Wirya Atmaja, S.Kom. M.Kom.</option>
+            <option>2. Henni Endah Wahanani, S.T., M.Kom.</option>
+          </select>
+
+          <label>Pilih tanggal mentoring</label>
+          <input type="date" />
+
+          <label>Jam Mentoring</label>
+          <select>
+            <option>--- Jam Mentoring ---</option>
+            <option>14:00</option>
+            <option>15:00</option>
+            <option>16.00</option>
+          </select>
+
+          <label>File</label>
+<div class="file-drop">
+  <p>Drag and Drop filemu di sini,<br>atau klik unggah</p>
+  <button type="button" class="upload-button">Unggah File</button>
 </div>
 
-<div class="pengajuan-wrapper">
-  <h2 class="pengajuan-title">Pilih Pengajuan Mentoring</h2>
-  <div class="pengajuan-options">
-  <div class="pengajuan-options">
-    <div class="option-card">
-      <img src="assets/review-draf.png" alt="Review Draft" />
-      <p>Review Draft</p>
-    </div>
-    <div class="option-card">
-      <img src="assets/meet-offline.png" alt="Offline Meet" />
-      <p>Offline Meet</p>
-    </div>
-    <div class="option-card">
-      <img src="assets/meet-online.png" alt="Online Meet" />
-      <p>Online Meet</p>
-    </div>
-  </div>
-</div>
+<button type="submit" class="submit-button">Buat Jadwal Mentoring</button>
 
+        </form>
+      </div>
     </main>
   </div>
 </body>

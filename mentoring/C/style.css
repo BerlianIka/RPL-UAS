@@ -1,3 +1,4 @@
+/* === RESET & FONT === */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ body {
   background-color: #f5f5f5;
 }
 
+/* === SIDEBAR === */
 .dashboard-container {
   display: flex;
   height: 100vh;
@@ -64,6 +66,7 @@ body {
   cursor: pointer;
 }
 
+/* === MAIN CONTENT === */
 .main {
   flex: 1;
   overflow-y: auto;
@@ -111,6 +114,96 @@ header {
   border: 2px solid #fff;
 }
 
+.back-button {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.page-title {
+  color: #333;
+  font-size: 22px;
+  text-align: center;
+  flex: 1;
+  font-weight: bold;
+}
+
+.mentoring-form-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 40px 32px;
+  border-radius: 20px;
+  max-width: 800px; /* atau 100% kalau benar-benar penuh */
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+}
+
+.mentoring-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mentoring-form label {
+  grid-column: span 2; /* label tetap satu baris penuh */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.mentoring-form input,
+.mentoring-form select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+.file-drop {
+  width: 100%;
+  height: 180px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* ⬅️ pusatkan isi secara horizontal */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.upload-button {
+  background-color: #f0aa3c;
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 12px; /* beri jarak dari teks atas */
+}
+
+.submit-button {
+  background-color: #7c4dff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: fit-content;
+  align-self: flex-end;
+  margin-top: 24px;
+}
+
 .page-header {
   position: relative;
   height: 60px;
@@ -118,65 +211,11 @@ header {
   align-items: center;
 }
 
-.pengajuan-container {
-  text-align: center;
-  color: white;
-  margin-top: 40px;
-}
-
-.pengajuan-title {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 32px;
-}
-
-.pengajuan-options {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.option-card {
-  background-color: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
-  border-radius: 16px;
-  padding: 24px;
-  width: 140px;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.option-card img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 12px;
-}
-
-.option-card p {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 500;
-  color: white;
-}
-
-.option-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.page-header {
-  position: relative;
-  height: 60px;
-  margin-bottom: 20px;
-}
-
 .back-button {
   position: absolute;
-  left: 20px;
-  top: 0;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.6);
   border: none;
   width: 44px;
@@ -187,9 +226,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 0.3s ease;
 }
 
+.page-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
 .back-button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -198,59 +244,5 @@ header {
   width: 20px;
   height: 20px;
   object-fit: contain;
-}
-
-.pengajuan-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  min-height: calc(100vh - 200px); /* sempitkan area tinggi */
-  padding-top: 30px; /* lebih dekat ke atas */
-  text-align: center;
-  color: white;
-}
-
-.pengajuan-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 32px;
-}
-
-.pengajuan-options {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.option-card {
-  background-color: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
-  border-radius: 16px;
-  padding: 24px;
-  width: 140px;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.option-card img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 12px;
-}
-
-.option-card p {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 500;
-  color: white;
-}
-
-.option-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
