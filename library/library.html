@@ -29,7 +29,6 @@
             <div></div> <!-- Placeholder agar layout tetap seimbang -->
             <div class="top-right-icons">
               <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
-              <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
               <img src="assets/profile-dashboard.jpg" alt="Profile" class="profile-image" />
             </div>
           </header>
@@ -186,7 +185,7 @@
 
 <div class="doc-card">
   <div class="doc-icon-title">
-    <img src="assets/frame.png" alt="Icon" class="doc-icon">
+    <img src="assets/Listpdf.png" alt="Icon" class="doc-icon">
     <div class="doc-title">Template MoA Mitra Pendidikan Sekolah</div>
   </div>
   <div class="doc-actions">
@@ -197,5 +196,52 @@
 </div>
     </main>
   </div>
+
+
+<!-- Modal Preview Gambar -->
+\<div class="modal-overlay" id="previewModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="modal-title-left">
+        <span id="modalTitle">Template Penulisan Skripsi</span>
+      </div>
+      <div class="modal-actions-right">
+        <a id="downloadBtn" href="#" download>
+          <i class="fa-solid fa-download"></i> <span>Unduh</span>
+        </a>
+        <button id="closeModal">&times;</button>
+      </div>
+    </div>
+    <img id="imageViewer" src="" alt="Preview Dokumen" />
+  </div>
+</div>
+
+<script>
+window.onload = function () {
+  document.querySelectorAll('.lihat').forEach(button => {
+    button.addEventListener('click', function () {
+      const title = this.closest('.doc-card').querySelector('.doc-title').innerText;
+      const image = document.getElementById('imageViewer');
+      const modal = document.getElementById('previewModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const downloadBtn = document.getElementById('downloadBtn');
+
+      const imagePath = "assets/Listpdf.png";
+      image.src = imagePath;
+      downloadBtn.href = imagePath;
+      modalTitle.innerText = title;
+
+      modal.style.display = "flex";
+    });
+  });
+
+  document.getElementById('closeModal').addEventListener('click', function () {
+    const modal = document.getElementById('previewModal');
+    const image = document.getElementById('imageViewer');
+    modal.style.display = 'none';
+    image.src = '';
+  });
+};
+</script>
 </body>
 </html>

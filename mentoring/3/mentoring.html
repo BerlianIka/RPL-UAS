@@ -32,42 +32,37 @@
         </div>
       </header>
 
-<div class="page-header">
-  <button class="back-button">
-    <img src="assets/icon-back.png" alt="Kembali" />
-  </button>
-  <h2 class="page-title">Pengajuan Mentoring</h2>
-</div>
-<div class="mentoring-form-container">
+      <div class="page-header">
+        <button class="back-button">
+          <img src="assets/icon-back.png" alt="Kembali" />
+        </button>
+        <h2 class="page-title">Pengajuan Mentoring</h2>
+      </div>
+
+      <div class="mentoring-form-container">
         <form class="mentoring-form">
           <label>Judul Mentoring</label>
-          <input type="text" placeholder="Masukkan Judul Mentoring" />
+          <input type="text" placeholder="Masukkan Judul Mentoring" value="Draft BAB II" readonly />
 
           <label>Pilih Dosen Pembimbing</label>
-          <select>
-            <option>--- Dosen Pembimbing ---</option>
-            <option>Dosen A</option>
-            <option>Dosen B</option>
-          </select>
+          <input type="text" value="1. Pratama Wirya Atmaja, S.Kom., M.Kom." readonly />
 
           <label>Pilih tanggal mentoring</label>
-          <input type="date" />
+          <input type="text" value="19 Mei 2025" readonly />
 
           <label>Jam Mentoring</label>
-          <select>
-            <option>--- Jam Mentoring ---</option>
-            <option>09:00</option>
-            <option>14:00</option>
-          </select>
+          <input type="text" value="14:00" readonly />
 
           <label>File</label>
-<div class="file-drop">
-  <p>Drag and Drop filemu di sini,<br>atau klik unggah</p>
-  <button type="button" class="upload-button">Unggah File</button>
-</div>
+          <div class="file-preview">
+            <i class="fa-solid fa-file"></i>
+            <span>Draft Proposal BAB II.pdf</span>
+          </div>
 
-<button type="submit" class="submit-button">Buat Jadwal Mentoring</button>
-
+          <div class="form-actions">
+            <button type="button" class="delete-button">Hapus</button>
+            <button type="submit" class="submit-button">Okay</button>
+          </div>
         </form>
       </div>
     </main>

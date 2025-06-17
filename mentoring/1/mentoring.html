@@ -13,19 +13,19 @@
     <aside class="sidebar">
       <img src="assets/logo-bima.png" alt="Logo BIMA" class="logo" />
       <nav class="menu">
-        <a href="../../dashboard/dashboard.html"><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
-        <a href="../../peta/peta.html"><img src="assets/icon-map.png" alt="" /> Peta</a>
-        <a href="../../mentoring/1/mentoring.html" class="active"><img src="assets/icon-bimbingan.png" alt="" /> Mentoring</a>
-        <a href="../../peringkat/peringkat.html"><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a>
-        <a href="../../library/library.html"><img src="assets/icon-library.png" alt="" /> Library</a>
+        <a href="#"><img src="assets/icon-dashboard.png" alt="" /> Dashboard</a>
+        <a href="#"><img src="assets/icon-map.png" alt="" /> Peta</a>
+        <a href="#" class="active"><img src="assets/icon-bimbingan.png" alt="" /> Mentoring</a>
+        <a href="#"><img src="assets/icon-peringkat.png" alt="" /> Peringkat</a>
+        <a href="#"><img src="assets/icon-library.png" alt="" /> Library</a>
       </nav>
-      <a class="logout" href="../login/1/login1.html"><img src="assets/icon-logout.png" alt="" /> Logout</a>
+      <a class="logout" href="#"><img src="assets/icon-logout.png" alt="" /> Logout</a>
     </aside>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN -->
     <main class="main">
       <header>
-        <div></div> <!-- Placeholder agar layout tetap seimbang -->
+        <div></div>
         <div class="top-right-icons">
           <button class="icon-button"><i class="fa-solid fa-bell"></i></button>
           <button class="icon-button"><i class="fa-solid fa-comment-dots"></i></button>
@@ -75,41 +75,39 @@
           </div>
         </div>
 
-<div class="maskot-wrapper">
-  <img src="assets/k-bima.png" alt="maskot" class="maskot" />
-  <div id="chat-bubble" class="chat-bubble">
-    Sudah mulai banyak sesi telah kamu lalui, merupakan satu langkah lebih dekat menuju gelar magister pengetahuan. Teruslah melangkah, jangan lengah!
-  </div>
-</div>
-
+        <div class="maskot-wrapper">
+          <img src="assets/k-bima.png" alt="maskot" class="maskot" />
+          <div id="chat-bubble" class="chat-bubble">
+            Sudah mulai banyak sesi telah kamu lalui, merupakan satu langkah lebih dekat menuju gelar magister pengetahuan. Teruslah melangkah, jangan lengah!
+          </div>
+        </div>
+      </div>
 
       <button class="mentoring-submit">Ajukan Jadwal Mentoring</button>
     </main>
   </div>
 
-<script>
-  const texts = [
-    "Sudah mulai banyak sesi telah kamu lalui, merupakan satu langkah lebih dekat menuju gelar magister pengetahuan. Teruslah melangkah, jangan lengah!",
-    "Jangan lupa unggah bukti mentoring agar pencapaianmu tercatat dengan baik!",
-    "Setiap langkah kecil hari ini, adalah lompatan besar di masa depan!"
-  ];
+  <script>
+    const texts = [
+      "Sudah mulai banyak sesi telah kamu lalui, merupakan satu langkah lebih dekat menuju gelar magister pengetahuan. Teruslah melangkah, jangan lengah!",
+      "Jangan lupa unggah bukti mentoring agar pencapaianmu tercatat dengan baik!",
+      "Setiap langkah kecil hari ini, adalah lompatan besar di masa depan!"
+    ];
 
-  let currentIndex = 0;
-  const bubble = document.getElementById("chat-bubble");
+    let currentIndex = 0;
+    const bubble = document.getElementById("chat-bubble");
 
-  function updateBubbleText() {
-    bubble.style.opacity = 0;
-    setTimeout(() => {
-      bubble.textContent = texts[currentIndex];
-      bubble.style.opacity = 1;
-      currentIndex = (currentIndex + 1) % texts.length;
-    }, 500);
-  }
+    function updateBubbleText() {
+      bubble.style.opacity = 0;
+      setTimeout(() => {
+        bubble.textContent = texts[currentIndex];
+        bubble.style.opacity = 1;
+        currentIndex = (currentIndex + 1) % texts.length;
+      }, 500);
+    }
 
-  setInterval(updateBubbleText, 10000);
-  window.onload = updateBubbleText;
-</script>
-</body>
-</html>
+    setInterval(updateBubbleText, 10000);
+    window.onload = updateBubbleText;
+  </script>
 </body>
 </html>
